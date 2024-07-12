@@ -1,2 +1,0 @@
-# HelloWorldMyNameIsNotImportant
-自己紹介の詳細版
