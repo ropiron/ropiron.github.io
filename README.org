@@ -1,2 +1,2 @@
-* HelloWorldMyNameIsNotImportant
-Blogにする。
+* My blog
+アイドルライブの感想Blog
