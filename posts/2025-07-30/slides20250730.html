@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<!-- 2025-07-30 水 14:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="precision3660-3" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<style>
+body {
+  margin: 0;
+  padding: 4%;
+  background: #fff;
+  color: #333;
+  font-family: "Meiryo", "Verdana", "Helvetica", "Tahoma", sans-serif;
+  font-size: 160%;     /* 全体の文字を拡大 */
+  line-height: 1.6;    /* 行間を広めに */
+}
+
+h1 {
+  font-size: 250%;
+  background-color: #edf2ff;
+  border-left: 25px solid #9fb7d4;
+  border-right: 25px solid #9fb7d4;
+  border-top: 1px solid #9fb7d4;
+  border-bottom: 1px solid #9fb7d4;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 200%;
+  background-color: #edf2ff;
+  border-left: 25px solid #9fb7d4;
+  border-top: 1px solid #9fb7d4;
+  border-bottom: 1px solid #9fb7d4;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+}
+
+ul {
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+pre, blockquote {
+  margin: 2% 0%;
+  padding: 2%;
+  border: 1px solid #9fb7d4;
+  background: #edf2ff;
+}
+
+</style>
+
+<div id="outline-container-org7dd0149" class="outline-2">
+<h2 id="org7dd0149"><span class="section-number-2">1.</span> 自己紹介</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>氏名：さんのみや</li>
+<li>仕事：道路排水の問題を3次元流体の技術で解決したい人</li>
+<li>先日、社会人選抜の博士課程の試験に申し込んだ</li>
+<li>Webアプリ（WebGIS）もやっている。</li>
+<li>今日の話は、*Flaskで論文レビュー支援アプリを作ってみた話*</li>
+</ul>
+
+
+<div id="orgf267718" class="figure">
+<p><img src="../../static/img/20250730132749.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;1:  </span>たとえばこんな感じの流れをコンピュータで計算して可視化。</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org55ed6f6" class="outline-2">
+<h2 id="org55ed6f6"><span class="section-number-2">2.</span> どんなものを作ったのか</h2>
+<div class="outline-text-2" id="text-2">
+
+<div id="orgffd1442" class="figure">
+<p><img src="../../static/img/20250730134347.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;2:  </span>論文レビュー支援アプリの画面（タイトルとか著者名など）</p>
+</div>
+
+
+<div id="org2f1fac2" class="figure">
+<p><img src="../../static/img/20250730134500.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;3:  </span>論文レビュー支援アプリの画面（テキストボックスとかラジオボタン）</p>
+</div>
+
+<div id="org78c6072" class="figure">
+<p><img src="../../static/img/20250730134635.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;4:  </span>論文レビュー支援アプリの画面（ドロップダウンとかファイルアップロード）</p>
+</div>
+
+
+<div id="org6a5aa57" class="figure">
+<p><img src="../../static/img/20250730140104.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;5:  </span>文献リスト（見づらいっすねえ）</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1732363" class="outline-2">
+<h2 id="org1732363"><span class="section-number-2">3.</span> 動機：なぜ作ろうと思ったか？</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>研究の新規性を説明するには既往研究の整理が重要</li>
+<li>問題として、論文の検索の問題</li>
+<li>インターネットで論文ダウンロード、後日読もうとするが、ファイル名から論文の内容を予測できない。</li>
+<li>論文1本ずつ読んでメモするためには、メモとPDFを紐付ける仕組みが必要</li>
+<li>最近Webアプリ作っているのもあり、Webフォームで記録 → CSVとPDFを一元管理したい！</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9382d8a" class="outline-2">
+<h2 id="org9382d8a"><span class="section-number-2">4.</span> 他の選択肢も考えた</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Mendeleyはサービス修了、zoteroよさそう</li>
+<li>Excelでもできそうな気がする（ドロップダウンリスト＋VBAなど駆使すれば）</li>
+<li>Google FormやMicrosoft Formでもできそう</li>
+<li>自分で自由に項目を変えたい、自作できるなら自作したい、ただし効率よく</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8dd2f65" class="outline-2">
+<h2 id="org8dd2f65"><span class="section-number-2">5.</span> 解決策の概要</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>論文の属性情報を手入力で記録</li>
+<li>ブラウザから入力して、CSV形式で保存（データベースは使わない）</li>
+<li>PDFファイルをFlaskアプリの任意のディレクトリ内に保存</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc7fcb3f" class="outline-2">
+<h2 id="orgc7fcb3f"><span class="section-number-2">6.</span> フォルダ構成</h2>
+<div class="outline-text-2" id="text-6">
+<div class="org-src-container">
+<pre class="src src-text">&#9500;&#9472;&#9472; app.py #&#26412;&#20307;
+&#9500;&#9472;&#9472; data.csv #&#35542;&#25991;PDF&#12501;&#12449;&#12452;&#12523;&#12398;&#23646;&#24615;&#24773;&#22577;
+&#9500;&#9472;&#9472; static
+&#9474;&#160;&#160; &#9492;&#9472;&#9472; uploads #&#35542;&#25991;PDF&#12398;&#20445;&#23384;&#22580;&#25152;
+&#9474;&#160;&#160;     &#9500;&#9472;&#9472; 20250723122742_75_54.pdf
+&#9474;&#160;&#160;     &#9500;&#9472;&#9472; 20250723125612_NezuCavity1.pdf
+&#9474;&#160;&#160;     &#9500;&#9472;&#9472; 20250723131250_Fujita_ichiro_trensh_suiritokusei03.pdf
+&#9474;&#160;&#160;     &#9492;&#9472;&#9472; 20250723132043_Fujita_ichiro_kaidan_trench.pdf
+&#9492;&#9472;&#9472; templates #Flask&#12398;render_template()&#12391;&#21442;&#29031;&#12377;&#12427;&#12501;&#12457;&#12523;&#12480;
+    &#9500;&#9472;&#9472; form.html #&#20837;&#21147;&#12501;&#12457;&#12540;&#12512;&#12398;&#12383;&#12417;&#12398;&#12486;&#12531;&#12503;&#12524;&#12540;&#12488;
+    &#9492;&#9472;&#9472; list.html #data.csv&#12434;HTML&#12391;&#25551;&#30011;&#12377;&#12427;&#12383;&#12417;&#12398;&#12486;&#12531;&#12503;&#12524;&#12540;&#12488;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org9ed2358" class="outline-2">
+<h2 id="org9ed2358"><span class="section-number-2">7.</span> ソースコード（app.py）</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #b6a0ff;">from</span> flask <span style="color: #b6a0ff;">import</span> Flask, render_template, request, redirect, send_from_directory
+<span style="color: #b6a0ff;">import</span> os
+<span style="color: #b6a0ff;">import</span> csv
+<span style="color: #b6a0ff;">import</span> time
+<span style="color: #b6a0ff;">from</span> werkzeug.utils <span style="color: #b6a0ff;">import</span> secure_filename
+
+<span style="color: #00d3d0;">app</span> = Flask(<span style="color: #f78fe7;">__name__</span>)
+<span style="color: #00d3d0;">UPLOAD_FOLDER</span> = <span style="color: #79a8ff;">'static/uploads'</span>
+<span style="color: #00d3d0;">CSV_FILE</span> = <span style="color: #79a8ff;">'data.csv'</span>
+app.<span style="color: #00d3d0;">config</span>[<span style="color: #79a8ff;">'UPLOAD_FOLDER'</span>] = UPLOAD_FOLDER
+
+<span style="color: #00d3d0;">FIELDS</span> = [
+    <span style="color: #79a8ff;">"title"</span>, <span style="color: #79a8ff;">"author"</span>, <span style="color: #79a8ff;">"publication"</span>, <span style="color: #79a8ff;">"Vol."</span>,<span style="color: #79a8ff;">"No."</span>,<span style="color: #79a8ff;">"pp."</span> , <span style="color: #79a8ff;">"year"</span>,
+    <span style="color: #79a8ff;">"keywords"</span>,
+    <span style="color: #79a8ff;">"content"</span>,<span style="color: #79a8ff;">"limitation"</span>,<span style="color: #79a8ff;">"relevance"</span>,<span style="color: #79a8ff;">"field"</span>, <span style="color: #79a8ff;">"structure"</span>, <span style="color: #79a8ff;">"phenomenon"</span>,<span style="color: #79a8ff;">"method"</span>,
+    <span style="color: #79a8ff;">"scale"</span>, <span style="color: #79a8ff;">"v_and_v"</span>, <span style="color: #79a8ff;">"uq"</span>,<span style="color: #79a8ff;">"read_status"</span>,
+    <span style="color: #79a8ff;">"pdf_path"</span>
+]
+
+<span style="color: #989898;"># </span><span style="color: #989898;">&#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#12364;&#12394;&#12369;&#12428;&#12400;&#20316;&#25104;</span>
+os.makedirs(UPLOAD_FOLDER, exist_ok=<span style="color: #00bcff;">True</span>)
+
+<span style="color: #6ae4b9;">@app.route</span>(<span style="color: #79a8ff;">'/'</span>)
+<span style="color: #b6a0ff;">def</span> <span style="color: #feacd0;">index</span>():
+    <span style="color: #b6a0ff;">return</span> render_template(<span style="color: #79a8ff;">'form.html'</span>, fields=FIELDS[:-1])  <span style="color: #989898;"># </span><span style="color: #989898;">pdf_path&#12399;&#38500;&#22806;</span>
+
+<span style="color: #6ae4b9;">@app.route</span>(<span style="color: #79a8ff;">'/submit'</span>, methods=[<span style="color: #79a8ff;">'POST'</span>])
+<span style="color: #b6a0ff;">def</span> <span style="color: #feacd0;">submit</span>():
+    <span style="color: #989898;"># </span><span style="color: #989898;">&#12501;&#12457;&#12540;&#12512;&#20837;&#21147;&#12398;&#21462;&#24471;</span>
+    <span style="color: #00d3d0;">row</span> = []
+    <span style="color: #b6a0ff;">for</span> field <span style="color: #b6a0ff;">in</span> FIELDS[:-1]:
+        <span style="color: #b6a0ff;">if</span> field <span style="color: #b6a0ff;">in</span> [<span style="color: #79a8ff;">'method'</span>, <span style="color: #79a8ff;">'phenomenon'</span>, <span style="color: #79a8ff;">'field'</span>]:  <span style="color: #989898;"># </span><span style="color: #989898;">&#8592; &#35079;&#25968;&#36984;&#25246;&#23550;&#24540;&#12375;&#12383;&#38917;&#30446;</span>
+            <span style="color: #00d3d0;">values</span> = request.form.getlist(field) <span style="color: #989898;"># </span><span style="color: #989898;">&#35079;&#25968;&#12398;&#20516;&#12434;&#21463;&#12369;&#21462;&#12427;</span>
+            row.append(<span style="color: #79a8ff;">';'</span>.join(values))  <span style="color: #989898;"># </span><span style="color: #989898;">&#12475;&#12511;&#12467;&#12525;&#12531;&#21306;&#20999;&#12426;&#12391;CSV&#12395;&#20837;&#12428;&#12427;</span>
+        <span style="color: #b6a0ff;">else</span>:
+            row.append(request.form.get(field, <span style="color: #79a8ff;">''</span>)) <span style="color: #989898;"># </span><span style="color: #989898;">&#21336;&#19968;&#12398;&#20516;&#12434;&#21463;&#12369;&#21462;&#12427;</span>
+
+    <span style="color: #989898;"># </span><span style="color: #989898;">PDF&#12450;&#12483;&#12503;&#12525;&#12540;&#12489;&#20966;&#29702;</span>
+    <span style="color: #f78fe7;">file</span> = request.files.get(<span style="color: #79a8ff;">'pdf'</span>)
+    <span style="color: #b6a0ff;">if</span> <span style="color: #f78fe7;">file</span> <span style="color: #b6a0ff;">and</span> <span style="color: #f78fe7;">file</span>.filename != <span style="color: #79a8ff;">''</span>:
+        <span style="color: #00d3d0;">timestamp</span> = time.strftime(<span style="color: #79a8ff;">"%Y%m%d%H%M%S"</span>)
+        <span style="color: #00d3d0;">filename</span> = f<span style="color: #79a8ff;">"</span>{timestamp}<span style="color: #79a8ff;">_</span>{secure_filename(<span style="color: #f78fe7;">file</span>.filename)}<span style="color: #79a8ff;">"</span>
+        <span style="color: #989898;">#</span><span style="color: #989898;">filename = secure_filename(file.filename)</span>
+        <span style="color: #00d3d0;">file_path</span> = os.path.join(app.config[<span style="color: #79a8ff;">'UPLOAD_FOLDER'</span>], filename)
+        <span style="color: #f78fe7;">file</span>.save(file_path)
+        row.append(file_path)
+    <span style="color: #b6a0ff;">else</span>:
+        row.append(<span style="color: #79a8ff;">''</span>)  <span style="color: #989898;"># </span><span style="color: #989898;">PDF&#12394;&#12375;</span>
+
+    <span style="color: #989898;"># </span><span style="color: #989898;">CSV&#12408;&#36861;&#35352;</span>
+    <span style="color: #b6a0ff;">with</span> <span style="color: #f78fe7;">open</span>(CSV_FILE, <span style="color: #79a8ff;">'a'</span>, newline=<span style="color: #79a8ff;">''</span>, encoding=<span style="color: #79a8ff;">'utf-8'</span>) <span style="color: #b6a0ff;">as</span> f:
+        <span style="color: #00d3d0;">writer</span> = csv.writer(f)
+        writer.writerow(row)
+
+    <span style="color: #b6a0ff;">return</span> redirect(<span style="color: #79a8ff;">'/list'</span>)
+
+<span style="color: #6ae4b9;">@app.route</span>(<span style="color: #79a8ff;">'/list'</span>)
+<span style="color: #b6a0ff;">def</span> <span style="color: #feacd0;">list_entries</span>():
+    <span style="color: #00d3d0;">entries</span> = []
+    <span style="color: #b6a0ff;">if</span> os.path.exists(CSV_FILE):
+        <span style="color: #b6a0ff;">with</span> <span style="color: #f78fe7;">open</span>(CSV_FILE, newline=<span style="color: #79a8ff;">''</span>, encoding=<span style="color: #79a8ff;">'utf-8'</span>) <span style="color: #b6a0ff;">as</span> f:
+            <span style="color: #00d3d0;">reader</span> = csv.reader(f)
+            <span style="color: #b6a0ff;">for</span> row <span style="color: #b6a0ff;">in</span> reader:
+                entries.append(<span style="color: #f78fe7;">dict</span>(<span style="color: #f78fe7;">zip</span>(FIELDS, row)))
+    <span style="color: #b6a0ff;">return</span> render_template(<span style="color: #79a8ff;">'list.html'</span>, entries=entries)
+
+<span style="color: #6ae4b9;">@app.route</span>(<span style="color: #79a8ff;">'/uploads/&lt;filename&gt;'</span>)
+<span style="color: #b6a0ff;">def</span> <span style="color: #feacd0;">uploaded_file</span>(filename):
+    <span style="color: #b6a0ff;">return</span> send_from_directory(app.config[<span style="color: #79a8ff;">'UPLOAD_FOLDER'</span>], filename)
+
+<span style="color: #b6a0ff;">if</span> <span style="color: #f78fe7;">__name__</span> == <span style="color: #79a8ff;">'__main__'</span>:
+    app.run(debug=<span style="color: #00bcff;">True</span>)
+
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org4b58fe6" class="outline-2">
+<h2 id="org4b58fe6"><span class="section-number-2">8.</span> フォーム部分（form.html）</h2>
+<div class="outline-text-2" id="text-8">
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="color: #b6a0ff;">!DOCTYPE</span> html&gt;
+&lt;<span style="color: #feacd0;">html</span>&gt;
+  &lt;<span style="color: #feacd0;">head</span>&gt;&lt;<span style="color: #feacd0;">meta</span> <span style="color: #00d3d0;">charset</span>=<span style="color: #79a8ff;">"utf-8"</span>&gt;&lt;<span style="color: #feacd0;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">&#25991;&#29486;&#20837;&#21147;</span>&lt;/<span style="color: #feacd0;">title</span>&gt;&lt;/<span style="color: #feacd0;">head</span>&gt;
+&lt;<span style="color: #feacd0;">body</span>&gt;
+  &lt;<span style="color: #feacd0;">h2</span>&gt;<span style="font-weight: bold; font-style: italic; text-decoration: underline;">&#25991;&#29486;&#20837;&#21147;&#12501;&#12457;&#12540;&#12512;</span>&lt;/<span style="color: #feacd0;">h2</span>&gt;
+  &lt;<span style="color: #feacd0;">form</span> <span style="color: #00d3d0;">method</span>=<span style="color: #79a8ff;">"post"</span> <span style="color: #00d3d0;">action</span>=<span style="color: #79a8ff;">"/submit"</span> <span style="color: #00d3d0;">enctype</span>=<span style="color: #79a8ff;">"multipart/form-data"</span>&gt;
+    {% for field in fields %}
+    &lt;<span style="color: #feacd0;">label</span>&gt;{{ field }}&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+        {% if field == 'content' %}
+        &lt;<span style="color: #feacd0;">textarea</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"content"</span>&gt;&lt;/<span style="color: #feacd0;">textarea</span>&gt;
+    {% elif field in ['field', 'structure', 'phenomenon', 'method', 'scale', 'v_and_v', 'uq' , 'read_status'] %}
+
+          {% if field == 'field' %}
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"field"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"&#21476;&#20856;&#27700;&#29702;&#23398;"</span>&gt; &#21476;&#20856;&#27700;&#29702;&#23398;&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"field"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"CFD"</span>&gt; CFD&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"field"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"&#22320;&#30436;&#24037;&#23398;"</span>&gt;&#22320;&#30436;&#24037;&#23398; &lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"field"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"V&amp;V"</span>&gt; VandV&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"field"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"&#23433;&#20840;&#21839;&#38988;_&#27861;&#38754;&#23849;&#22730;"</span>&gt;&#23433;&#20840;&#21839;&#38988;_&#27861;&#38754;&#23849;&#22730; &lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+
+            {% elif field == 'structure' %}
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"structure"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"trench"</span>&gt; trench&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"structure"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"junction"</span>&gt;junction &lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"structure"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"slope"</span>&gt; slope&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+
+            {% elif field == 'phenomenon' %}
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"phenomenon"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"hydraulic_jump"</span>&gt; hydraulic_jump&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"phenomenon"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"recirculation"</span>&gt; recirculation&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"phenomenon"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"rapid varied flow"</span>&gt; rapid varied flow&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+
+          {% elif field == 'method' %}
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"method"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"experiment"</span>&gt; experiment&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"method"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"CFD"</span>&gt; CFD&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"method"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"VOF"</span>&gt; VOF&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"method"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"MPS"</span>&gt; MPS&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+            &lt;<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"checkbox"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"method"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"PIV"</span>&gt; PIV&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+
+            {% elif field == 'scale' %}
+            &lt;<span style="color: #feacd0;">select</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"scale"</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"&#12394;&#12375;"</span>&gt;&#12394;&#12375;&lt;/<span style="color: #feacd0;">option</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"lab-scale"</span>&gt;lab-scale&lt;/<span style="color: #feacd0;">option</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"prototype"</span>&gt;prototype&lt;/<span style="color: #feacd0;">option</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"computational"</span>&gt;computational&lt;/<span style="color: #feacd0;">option</span>&gt;
+            &lt;<span style="color: #feacd0;">select</span>&gt;
+            {% elif field == 'v_and_v' %}
+            &lt;<span style="color: #feacd0;">select</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"v_and_v"</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"&#12394;&#12375;"</span>&gt;&#12394;&#12375;&lt;/<span style="color: #feacd0;">option</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"verification only"</span>&gt;verification only&lt;/<span style="color: #feacd0;">option</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"validation only"</span>&gt;validation only&lt;/<span style="color: #feacd0;">option</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"VV&#12354;&#12426;"</span>&gt;VandV&#12354;&#12426;&lt;/<span style="color: #feacd0;">option</span>&gt;
+            {% elif field == 'uq' %}
+            &lt;<span style="color: #feacd0;">select</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"uq"</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"uq&#12394;&#12375;"</span>&gt;uq&#12394;&#12375;&lt;/<span style="color: #feacd0;">option</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"uq&#12354;&#12426;"</span>&gt;uq&#12354;&#12426;&lt;/<span style="color: #feacd0;">option</span>&gt;
+            {% elif field == 'read_status' %}
+            &lt;<span style="color: #feacd0;">select</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"read_status"</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"&#12394;&#12375;"</span>&gt;&#12394;&#12375;&lt;/<span style="color: #feacd0;">option</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"read"</span>&gt;read&lt;/<span style="color: #feacd0;">option</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"unread"</span>&gt;unread&lt;/<span style="color: #feacd0;">option</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"skimmed"</span>&gt;skimmed&lt;/<span style="color: #feacd0;">option</span>&gt;
+            &lt;<span style="color: #feacd0;">option</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"important"</span>&gt;important&lt;/<span style="color: #feacd0;">option</span>&gt;
+          {% endif %}
+        &lt;/<span style="color: #feacd0;">select</span>&gt;
+      {% else %}
+        &lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"text"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"{{ field }}"</span> <span style="color: #00d3d0;">size</span>=<span style="color: #79a8ff;">"80"</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+      {% endif %}
+      &lt;<span style="color: #feacd0;">br</span>&gt;
+    {% endfor %}
+    &lt;<span style="color: #feacd0;">label</span>&gt;PDF&#12501;&#12449;&#12452;&#12523;:&lt;/<span style="color: #feacd0;">label</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+    &lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"file"</span> <span style="color: #00d3d0;">name</span>=<span style="color: #79a8ff;">"pdf"</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;&lt;<span style="color: #feacd0;">br</span>&gt;
+    &lt;<span style="color: #feacd0;">input</span> <span style="color: #00d3d0;">type</span>=<span style="color: #79a8ff;">"submit"</span> <span style="color: #00d3d0;">value</span>=<span style="color: #79a8ff;">"&#20445;&#23384;"</span>&gt;
+  &lt;/<span style="color: #feacd0;">form</span>&gt;
+  &lt;<span style="color: #feacd0;">br</span>&gt;&lt;<span style="color: #feacd0;">a</span> <span style="color: #00d3d0;">href</span>=<span style="color: #79a8ff;">"/list"</span>&gt;&#8594; &#20445;&#23384;&#28168;&#12415;&#25991;&#29486;&#12434;&#35211;&#12427;&lt;/<span style="color: #feacd0;">a</span>&gt;
+&lt;/<span style="color: #feacd0;">body</span>&gt;
+  &lt;<span style="color: #feacd0;">script</span>&gt;
+    // &#12501;&#12457;&#12540;&#12512;&#20869;&#12391; Enter &#12461;&#12540;&#12434;&#25276;&#12375;&#12383;&#12392;&#12365;&#12395;&#36865;&#20449;&#12373;&#12428;&#12394;&#12356;&#12424;&#12358;&#12395;&#12377;&#12427;
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+      form.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" &amp;&amp; event.target.tagName !== "TEXTAREA") {
+          event.preventDefault(); // Enter &#12461;&#12540;&#12395;&#12424;&#12427;&#36865;&#20449;&#12434;&#38450;&#27490;
+        }
+      });
+    });
+  &lt;/<span style="color: #feacd0;">script</span>&gt;
+&lt;/<span style="color: #feacd0;">head</span>&gt;
+&lt;/<span style="color: #feacd0;">html</span>&gt;
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3740dc6" class="outline-2">
+<h2 id="org3740dc6"><span class="section-number-2">9.</span> フォーム側の工夫（form.html）</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>field, phenomenon, methodなどはラジオボタンで複数選択可能に</li>
+<li>送信前に Enter キーで誤送信しないよう JSで防止</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2aac291" class="outline-2">
+<h2 id="org2aac291"><span class="section-number-2">10.</span> 保存したCSVをHTML表にするlist.html</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="color: #b6a0ff;">!DOCTYPE</span> html&gt;
+&lt;<span style="color: #feacd0;">html</span>&gt;
+  &lt;<span style="color: #feacd0;">head</span>&gt;&lt;<span style="color: #feacd0;">meta</span> <span style="color: #00d3d0;">charset</span>=<span style="color: #79a8ff;">"utf-8"</span>&gt;&lt;<span style="color: #feacd0;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">&#25991;&#29486;&#19968;&#35239;</span>&lt;/<span style="color: #feacd0;">title</span>&gt;&lt;/<span style="color: #feacd0;">head</span>&gt;
+&lt;<span style="color: #feacd0;">body</span>&gt;
+  &lt;<span style="color: #feacd0;">h2</span>&gt;<span style="font-weight: bold; font-style: italic; text-decoration: underline;">&#20445;&#23384;&#28168;&#12415;&#25991;&#29486;&#12522;&#12473;&#12488;</span>&lt;/<span style="color: #feacd0;">h2</span>&gt;
+  &lt;<span style="color: #feacd0;">table</span> <span style="color: #00d3d0;">border</span>=<span style="color: #79a8ff;">"1"</span>&gt;
+    &lt;<span style="color: #feacd0;">tr</span>&gt;
+      {% for key in entries[0].keys() %}
+        &lt;<span style="color: #feacd0;">th</span>&gt;{{ key }}&lt;/<span style="color: #feacd0;">th</span>&gt;
+      {% endfor %}
+    &lt;/<span style="color: #feacd0;">tr</span>&gt;
+    {% for entry in entries %}
+      &lt;<span style="color: #feacd0;">tr</span>&gt;
+        {% for key, value in entry.items() %}
+          &lt;<span style="color: #feacd0;">td</span>&gt;
+            {% if key == 'pdf_path' and value %}
+              &lt;<span style="color: #feacd0;">a</span> <span style="color: #00d3d0;">href</span>=<span style="color: #79a8ff;">"{{ '/' + value }}"</span>&gt;{{ value.split('/')[-1] }}&lt;/<span style="color: #feacd0;">a</span>&gt;
+            {% else %}
+              {{ value }}
+            {% endif %}
+          &lt;/<span style="color: #feacd0;">td</span>&gt;
+        {% endfor %}
+      &lt;/<span style="color: #feacd0;">tr</span>&gt;
+    {% endfor %}
+  &lt;/<span style="color: #feacd0;">table</span>&gt;
+  &lt;<span style="color: #feacd0;">br</span>&gt;&lt;<span style="color: #feacd0;">a</span> <span style="color: #00d3d0;">href</span>=<span style="color: #79a8ff;">"/"</span>&gt;&#8592; &#12501;&#12457;&#12540;&#12512;&#12395;&#25147;&#12427;&lt;/<span style="color: #feacd0;">a</span>&gt;
+&lt;/<span style="color: #feacd0;">body</span>&gt;
+&lt;/<span style="color: #feacd0;">html</span>&gt;
+
+
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org2640516" class="outline-2">
+<h2 id="org2640516"><span class="section-number-2">11.</span> list.html のレンダリング</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li>CSVを読み込んでHTMLテーブル化</li>
+<li>PDFパスがあればリンクに変換</li>
+<li>見づらさは今後の課題（CSSでなんとかする）</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbed5ff0" class="outline-2">
+<h2 id="orgbed5ff0"><span class="section-number-2">12.</span> 技術的な勘所・感想</h2>
+<div class="outline-text-2" id="text-12">
+<ul class="org-ul">
+<li>Flaskのテンプレート機能で動的に入力フォームのHTMLを作成</li>
+<li>フォームの複数選択 → form.getlist() で対応</li>
+<li>secure_filename()はディレクトリトラバースを防ぐうえで重要なFlaskの機能</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdebf1b6" class="outline-2">
+<h2 id="orgdebf1b6"><span class="section-number-2">13.</span> まとめ</h2>
+<div class="outline-text-2" id="text-13">
+<ul class="org-ul">
+<li><b>論文レビューを支援する個人用アプリを作成した</b></li>
+<li>入力項目が多いとやる気を失い、使わなくなる印象</li>
+<li>使いやすさは、今後改善する予定</li>
+<li>ExcelやGoogle Formにはない自由度を実現</li>
+<li>Flask × HTML × CSV で気軽に作れる</li>
+</ul>
+
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll('.outline-2');
+  slides.forEach((s, i) => s.style.display = i === 0 ? 'block' : 'none');
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' && current < slides.length - 1) {
+      slides[current++].style.display = 'none';
+      slides[current].style.display = 'block';
+    } else if (e.key === 'ArrowLeft' && current > 0) {
+      slides[current--].style.display = 'none';
+      slides[current].style.display = 'block';
+    }
+  });
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>
