@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-08-06 水 23:19 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="precision3660-3" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+
+<style>
+body {
+  margin: 0;
+  padding: 4%;
+  background: #fff;
+  color: #333;
+  font-family: "Meiryo", "Verdana", "Helvetica", "Tahoma", sans-serif;
+  font-size: 160%;     /* 全体の文字を拡大 */
+  line-height: 1.5;    /* 行間を広めに */
+  position: relative;  /* ページ番号の位置指定に必要 */
+}
+
+h1 {
+  font-size: 250%;
+  background-color: #edf2ff;
+  border-left: 25px solid #9fb7d4;
+  border-right: 25px solid #9fb7d4;
+  border-top: 1px solid #9fb7d4;
+  border-bottom: 1px solid #9fb7d4;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 200%;
+  color: #ffffff;
+  background-color: #0f2350;
+  border-left: 25px solid #9fb7d4;
+  border-top: 1px solid #9fb7d4;
+  border-bottom: 1px solid #9fb7d4;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+}
+
+ul {
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+pre, blockquote {
+  margin: 2% 0%;
+  padding: 2%;
+  border: 1px solid #9fb7d4;
+  background: #edf2ff;
+}
+page-num {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 50%;
+  color: #888;
+}
+</style>
+
+<div id="outline-container-orgf40dcbf" class="outline-2">
+<h2 id="orgf40dcbf">Verification and Validation of Water Surface Profile and Pressure Distributions in Steep Channels for Road Drainage Structures</h2>
+<div class="outline-text-2" id="text-orgf40dcbf">
+<div class="org-center">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Name</th>
+<th scope="col" class="org-left">Belongings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Hiroyuki Sannomiya</td>
+<td class="org-left">Sanei co.ltd</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org44026ff" class="outline-2">
+<h2 id="org44026ff">Agenda</h2>
+<div class="outline-text-2" id="text-org44026ff">
+<ol class="org-ol">
+<li>Introduction
+<ol class="org-ol">
+<li>Background &amp; Problem Statement</li>
+<li>Research Objective and Approach</li>
+</ol></li>
+<li>Technical Approach
+<ol class="org-ol">
+<li>Methodology</li>
+<li>Verification</li>
+<li>Validation</li>
+</ol></li>
+<li>Discussion
+<ol class="org-ol">
+<li>Conclusion</li>
+<li>Future Work &amp; QA</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgbb487c4" class="outline-2">
+<h2 id="orgbb487c4">Introduction</h2>
+<div class="outline-text-2" id="text-orgbb487c4">
+</div>
+<div id="outline-container-orga79faf0" class="outline-3">
+<h3 id="orga79faf0">Background &amp; Problem Statement</h3>
+<div class="outline-text-3" id="text-orga79faf0">
+<ul class="org-ul">
+<li>Road embankments consist of cut slopes and fill slopes, both typically protected by vegetation or concrete spraying.</li>
+</ul>
+
+
+<div id="orgdea5ef8" class="figure">
+<p><img src="../../static/img/20250806140052.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Terms used to define road: cross-section</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd7ea1db" class="outline-2">
+<h2 id="orgd7ea1db">Introduction</h2>
+<div class="outline-text-2" id="text-orgd7ea1db">
+</div>
+<div id="outline-container-orgc07e862" class="outline-3">
+<h3 id="orgc07e862">Background &amp; Problem Statement</h3>
+<div class="outline-text-3" id="text-orgc07e862">
+<ul class="org-ul">
+<li>In recent years, heavy rainfall has caused overflow from drainage channels, leading to numerous slope failures[1].</li>
+<li>These failures often result in road closures and prolonged recovery, highlighting the urgent need for preventive measures.</li>
+</ul>
+
+
+<div id="orgaedbb82" class="figure">
+<p><img src="../../static/img/20250806185246.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Schematic diagram of slope drainage structure</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org636fdcb" class="outline-2">
+<h2 id="org636fdcb">Introduction</h2>
+<div class="outline-text-2" id="text-org636fdcb">
+</div>
+<div id="outline-container-orgbcc8d66" class="outline-3">
+<h3 id="orgbcc8d66">Background &amp; Problem Statement</h3>
+<div class="outline-text-3" id="text-orgbcc8d66">
+<ul class="org-ul">
+<li>In recent years, heavy rainfall has caused overflow from drainage channels, leading to numerous slope failures[1].</li>
+<li>These failures often result in road closures and prolonged recovery, highlighting the urgent need for preventive measures.</li>
+</ul>
+
+
+<div id="orgc85ef08" class="figure">
+<p><img src="../../static/img/20250806144322.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">Figure 3: </span>Pie charts of slope failure ratio</p>
+</div>
+
+<p>
+[1] Kato, Y., Ogata, K. and Kitamura, Y.: Relation between rain-induced slope disaster and drainage structures, 28th Conference of Kanto Branch of JSCE, pp. 464-465, 2001.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga13cc1d" class="outline-2">
+<h2 id="orga13cc1d">Introduction</h2>
+<div class="outline-text-2" id="text-orga13cc1d">
+</div>
+<div id="outline-container-orgf623437" class="outline-3">
+<h3 id="orgf623437">Background &amp; Problem Statement</h3>
+<div class="outline-text-3" id="text-orgf623437">
+<ul class="org-ul">
+<li>Conventional drainage design typically combines the rational formula to estimate peak runoff and Manning’s equation to size channels, assuming steady and uniform flow conditions.</li>
+<li>However, overflow at junctions is often caused by rapidly varied flow, such as hydraulic jumps, which are not considered in these methods.</li>
+<li>This indicates a significant gap in current design practices, and I believe there is a strong need to establish design methodologies that account for such flow transitions.</li>
+</ul>
+
+<div id="org9d6f2d5" class="figure">
+<p><img src="../../static/img/haisuiFlowchart.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">Figure 4: </span>Conventional drainage design flow chart</p>
+</div>
+
+<div id="org2bbeb52" class="figure">
+<p><img src="../../static/img/20250806222528.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">Figure 5: </span>Uniform flow depth and actual water surface</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgbba6b19" class="outline-2">
+<h2 id="orgbba6b19">Introduction</h2>
+<div class="outline-text-2" id="text-orgbba6b19">
+</div>
+<div id="outline-container-org838fee2" class="outline-3">
+<h3 id="org838fee2">Research Objective and Approach</h3>
+<div class="outline-text-3" id="text-org838fee2">
+</div>
+<div id="outline-container-org78aa955" class="outline-4">
+<h4 id="org78aa955">Objective</h4>
+<div class="outline-text-4" id="text-org78aa955">
+<ul class="org-ul">
+<li>Accurately reproduce rapidly varied flow in steep open channels and clarify differences in physical phenomena.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org41aba42" class="outline-4">
+<h4 id="org41aba42">Approach(V&amp;V method)</h4>
+<div class="outline-text-4" id="text-org41aba42">
+<ul class="org-ul">
+<li>Conduct verification via grid convergence analysis using the VOF method.</li>
+<li>Validate results by comparison with physical experiments and simulations</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org349df25" class="outline-2">
+<h2 id="org349df25">Technical Approach</h2>
+<div class="outline-text-2" id="text-org349df25">
+</div>
+<div id="outline-container-org22cc7b6" class="outline-3">
+<h3 id="org22cc7b6">Methodology</h3>
+<div class="outline-text-3" id="text-org22cc7b6">
+<ul class="org-ul">
+<li>About V&amp;V
+<ul class="org-ul">
+<li><b><b>Verification</b></b>: Are we solving the equations right?
+<ul class="org-ul">
+<li>Purpose: Confirm that the equations are correctly solved.</li>
+<li>Methods: Algorithm checks, grid convergence studies, etc.</li>
+<li>Examples: Code verification, solution verification</li>
+</ul></li>
+
+<li><b><b>Validation</b></b>: Are we solving the right equations?
+<ul class="org-ul">
+<li>Purpose:Confirm that the model represents physical reality.</li>
+<li>Methods: Comparison with experimental data, tolerance criteria</li>
+<li>Monte Carlo simulations, Uncertainty Quantification (UQ)</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org038fefd" class="outline-2">
+<h2 id="org038fefd">Technical Approach</h2>
+<div class="outline-text-2" id="text-org038fefd">
+</div>
+<div id="outline-container-org9b94fa5" class="outline-3">
+<h3 id="org9b94fa5">Verification(Governing Equations for Numerical Analysis)</h3>
+<div class="outline-text-3" id="text-org9b94fa5">
+<ul class="org-ul">
+<li>The computational solver used is interFoam, which handles incompressible, unsteady, isothermal two-phase gas-liquid flows.</li>
+<li>The governing equations solved include the continuity equation, Navier–Stokes equations, and the VOF transport equations, as shown below.</li>
+</ul>
+
+<p>
+\[\nabla \cdot \boldsymbol{U} = 0  \\\]
+\[\frac{\partial \boldsymbol{U}}{\partial t} +\nabla \cdot (\rho \boldsymbol{U} \boldsymbol{U}) = - \frac{1}{\rho} \nabla p + \nu \nabla^2 \boldsymbol{U} + \boldsymbol{F_\sigma} + \boldsymbol{g}  \]
+\[\frac{\partial \alpha}{\partial t} +\nabla \cdot (\alpha \boldsymbol{U} ) + \nabla \cdot (\alpha (1-\alpha) \boldsymbol{U}_r) = 0\]
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5f3d61d" class="outline-2">
+<h2 id="org5f3d61d">Technical Approach</h2>
+<div class="outline-text-2" id="text-org5f3d61d">
+</div>
+<div id="outline-container-org6f7b588" class="outline-3">
+<h3 id="org6f7b588">Verification(Calculation Conditions)</h3>
+<div class="outline-text-3" id="text-org6f7b588">
+<ul class="org-ul">
+<li>Mesh sizes: 5 mm, 10 mm, 20 mm</li>
+<li>Atmospheric boundary condition with zero gauge pressure</li>
+</ul>
+
+<div id="org7627faa" class="figure">
+<p><img src="../../static/img/20250806224648.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">Figure 6: </span>Calculation conditions</p>
+</div>
+
+
+<div id="org6fc47be" class="figure">
+<p><img src="../../static/img/20250806225659.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">Figure 7: </span>Calculation conditions</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcb995eb" class="outline-2">
+<h2 id="orgcb995eb">Technical Approach</h2>
+<div class="outline-text-2" id="text-orgcb995eb">
+</div>
+<div id="outline-container-org6db36ed" class="outline-3">
+<h3 id="org6db36ed">Verification(Assumptions)</h3>
+<div class="outline-text-3" id="text-org6db36ed">
+<ul class="org-ul">
+<li>In the absence of an exact solution, solution verification is performed by conducting a grid convergence study.</li>
+<li>The Grid Convergence Index (GCI) method is applied to evaluate the numerical uncertainty and confirm that the simulation results converge with mesh refinement.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga016e44" class="outline-2">
+<h2 id="orga016e44"><b>Richardson Extrapolation</b></h2>
+<div class="outline-text-2" id="text-orga016e44">
+<ul class="org-ul">
+<li><p>
+The numerical solution \(\phi\) can be expressed as a Taylor series expansion with respect to grid spacing \(h\), assuming convergence toward a grid-independent (exact) solution \(\phi_e\):
+</p>
+
+<p>
+\[
+  \phi = \phi_e + c_1 h + c_2 h^2 + c_3 h^3 + \cdots
+  \]
+</p></li>
+
+<li>Coefficients \(c_1, c_2, c_3, \ldots\) are constants that do <b><b>not</b></b> depend on the grid.</li>
+
+<li>In CFD, numerical schemes typically have <b><b>first-order</b></b> or <b><b>second-order</b></b> accuracy.</li>
+
+<li><p>
+For <b><b>second-order schemes</b></b>, the first-order error term disappears, i.e.,
+</p>
+
+<p>
+\[
+  c_1 = 0
+  \]
+</p></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgd46d808" class="outline-2">
+<h2 id="orgd46d808">Technical Approach</h2>
+<div class="outline-text-2" id="text-orgd46d808">
+</div>
+<div id="outline-container-org36d96c1" class="outline-3">
+<h3 id="org36d96c1">Discretization Error Assessment</h3>
+<div class="outline-text-3" id="text-org36d96c1">
+<p>
+Here, \(p\) is the observed order of convergence, and \(r_{21} = h_2 / h_1\) is the grid refinement ratio (\(h_1\) is the grid spacing of the finest mesh).  
+\(f_1, f_2, f_3\) are the representative numerical results obtained from three different mesh sizes.  
+\(F_s\) is the safety factor (1.25 is adopted for conservative estimation).  
+\(f_{\text{ext}}\) is the extrapolated true solution, and \(GCI_{\text{fine}}\) is the estimated error band representing a 95% confidence interval for \(f_1\).
+</p>
+
+<p>
+\[
+p = \frac{\ln \left(\frac{|f_3 - f_2|}{|f_2 - f_1|} \right)}{\ln r_{21}}
+\]
+</p>
+
+<p>
+\[
+f_{\text{ext}} = \frac{r_{21}^p f_1 - f_2}{r_{21}^p - 1}
+\]
+</p>
+
+<p>
+\[
+GCI_{\text{fine}} = \frac{F_s |f_1 - f_2|}{r_{21}^p - 1}
+\]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7dbffa4" class="outline-2">
+<h2 id="org7dbffa4">Technical Approach</h2>
+<div class="outline-text-2" id="text-org7dbffa4">
+</div>
+<div id="outline-container-orgfd3f346" class="outline-3">
+<h3 id="orgfd3f346">Validation</h3>
+<div class="outline-text-3" id="text-orgfd3f346">
+<ul class="org-ul">
+<li>Numerical results show good agreement with experimental data.</li>
+<li>High model validity confirmed; experimental uncertainty is taken into account.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org29b1e8d" class="outline-2">
+<h2 id="org29b1e8d">Conclusion</h2>
+<div class="outline-text-2" id="text-org29b1e8d">
+<ul class="org-ul">
+<li>VOF method accurately reproduces steep open channel flows.</li>
+<li>Confirmed that pressure and water surface are within acceptable error at appropriate grid size.</li>
+<li>Applicable to performance-based design support of drainage structures.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgba9c994" class="outline-2">
+<h2 id="orgba9c994">Future Work</h2>
+<div class="outline-text-2" id="text-orgba9c994">
+<ul class="org-ul">
+<li>Conduct full-scale (1:1) experiments of open channel and catch basin for further V&amp;V.</li>
+<li>Predict h₁, h_max, h₂ based on energy conservation.</li>
+<li>Aim to develop performance-based design guidelines.</li>
+</ul>
+
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll('.outline-2');
+  slides.forEach((s, i) => s.style.display = i === 0 ? 'block' : 'none');
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' && current < slides.length - 1) {
+      slides[current++].style.display = 'none';
+      slides[current].style.display = 'block';
+    } else if (e.key === 'ArrowLeft' && current > 0) {
+      slides[current--].style.display = 'none';
+      slides[current].style.display = 'block';
+    }
+  });
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>
