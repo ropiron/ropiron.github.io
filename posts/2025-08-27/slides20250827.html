@@ -630,16 +630,39 @@ b.append(4) <span style="color: #989898;"># </span><span style="color: #989898;"
   const slides = document.querySelectorAll('.outline-2');
   slides.forEach((s, i) => s.style.display = i === 0 ? 'block' : 'none');
 
+  function showSlide(idx) {
+    slides[current].style.display = 'none';
+    current = idx;
+    slides[current].style.display = 'block';
+  }
+
+  // キーボード対応
   document.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight' && current < slides.length - 1) {
-      slides[current++].style.display = 'none';
-      slides[current].style.display = 'block';
+      showSlide(current + 1);
     } else if (e.key === 'ArrowLeft' && current > 0) {
-      slides[current--].style.display = 'none';
-      slides[current].style.display = 'block';
+      showSlide(current - 1);
+    }
+  });
+
+  // スマホのスワイプ対応
+  let startX = 0;
+  document.addEventListener('touchstart', e => {
+    startX = e.changedTouches[0].screenX;
+  });
+  document.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].screenX;
+    if (endX - startX > 50 && current > 0) {
+      // 右スワイプ → 前のスライド
+      showSlide(current - 1);
+    } else if (startX - endX > 50 && current < slides.length - 1) {
+      // 左スワイプ → 次のスライド
+      showSlide(current + 1);
     }
   });
 </script>
+
+
 </div>
 </div>
 </div>
