@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
 <head>
-<!-- 2025-08-27 水 11:52 -->
+<!-- 2025-08-27 水 13:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -204,7 +204,8 @@ body {
   color: #333;
   font-family: "Meiryo", "Verdana", "Helvetica", "Tahoma", sans-serif;
   font-size: 160%;     /* 全体の文字を拡大 */
-  line-height: 1.6;    /* 行間を広めに */
+  line-height: 1.5;    /* 行間を広めに */
+  position: relative;  /* ページ番号の位置指定に必要 */
 }
 
 h1 {
@@ -220,7 +221,8 @@ h1 {
 
 h2 {
   font-size: 200%;
-  background-color: #edf2ff;
+  color: #ffffff;
+  background-color: #0f2350;
   border-left: 25px solid #9fb7d4;
   border-top: 1px solid #9fb7d4;
   border-bottom: 1px solid #9fb7d4;
@@ -242,15 +244,22 @@ pre, blockquote {
   border: 1px solid #9fb7d4;
   background: #edf2ff;
 }
+page-num {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 50%;
+  color: #888;
+}
 
 </style>
 
-<div id="outline-container-orgaa4194a" class="outline-2">
-<h2 id="orgaa4194a"><span class="section-number-2">1.</span> 知的生産サイクルとPython/生成AI</h2>
+<div id="outline-container-org0d06963" class="outline-2">
+<h2 id="org0d06963"><span class="section-number-2">1.</span> 知的生産サイクルとPython/生成AI</h2>
 </div>
 
-<div id="outline-container-org94063c9" class="outline-2">
-<h2 id="org94063c9"><span class="section-number-2">2.</span> 自己紹介</h2>
+<div id="outline-container-org2378c8b" class="outline-2">
+<h2 id="org2378c8b"><span class="section-number-2">2.</span> 自己紹介</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>氏名：さんのみや</li>
@@ -266,8 +275,8 @@ pre, blockquote {
 </div>
 </div>
 
-<div id="outline-container-orgd9aaee7" class="outline-2">
-<h2 id="orgd9aaee7"><span class="section-number-2">3.</span> 背景</h2>
+<div id="outline-container-org43e5b60" class="outline-2">
+<h2 id="org43e5b60"><span class="section-number-2">3.</span> 背景</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>背景として、「研究開発を進めさせてくれ」と嘆きたくなる場面が増えてきた。</li>
@@ -277,8 +286,8 @@ pre, blockquote {
 </div>
 </div>
 
-<div id="outline-container-org708c861" class="outline-2">
-<h2 id="org708c861"><span class="section-number-2">4.</span> 目的</h2>
+<div id="outline-container-orgf54b119" class="outline-2">
+<h2 id="orgf54b119"><span class="section-number-2">4.</span> 目的</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>「知的生産とはなにか」
@@ -296,46 +305,87 @@ pre, blockquote {
 </div>
 </div>
 
-<div id="outline-container-org628439b" class="outline-2">
-<h2 id="org628439b"><span class="section-number-2">5.</span> 情報収集のコツ</h2>
+<div id="outline-container-orgefb89a0" class="outline-2">
+<h2 id="orgefb89a0"><span class="section-number-2">5.</span> 情報収集のコツ</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
-<li>欲しい情報だけ取る「つまみ食い」でよい。
+<li>まず生成AI（ChatGPT）に聞け</li>
+<li>欲しい情報だけ取る「つまみ食い」でもよい。
 <ul class="org-ul">
 <li>遅延評価的に、あとからその周辺を学ぶ</li>
 </ul></li>
 <li>目次から構造を把握、「キーワードに疑問を持つ」。</li>
-<li>詳細を読む。何回も読む。思い出す。時間をかける。</li>
+<li>詳細を読む。時間を決めて何回も読む。思い出す。</li>
 <li>理解が難しいなら、片っ端から読む、プログラムを写経するでもよい。</li>
 </ul>
+
+<div id="orgfe88841" class="figure">
+<p><img src="../../static/img/20250827123513.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;1:  </span>Python言語リファレンスのスクショ</p>
+</div>
 </div>
 </div>
 
-
-<div id="outline-container-orga381831" class="outline-2">
-<h2 id="orga381831"><span class="section-number-2">6.</span> 抽象化（理解）のコツ</h2>
+<div id="outline-container-orgbf264df" class="outline-2">
+<h2 id="orgbf264df"><span class="section-number-2">6.</span> 抽象化（理解）のコツ</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li>自分の言葉で整理する。</li>
+<li>目次で構造を理解して、それぞれ何も見ずにイメージ・説明できるレベル</li>
 <li>新しい知識の習得には時間かかる。速読は無理。</li>
 <li>自分の目的「どんな場面で使えるか」を考える</li>
 </ul>
+
+
+<div id="orgac0fe58" class="figure">
+<p><img src="../../static/img/20250827124458.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;2:  </span>構造化して整理された情報を組み立てるのには時間がかかるといいたい。</p>
+</div>
 </div>
 </div>
 
-<div id="outline-container-org7ccc4ed" class="outline-2">
-<h2 id="org7ccc4ed"><span class="section-number-2">7.</span> 余談：LモードとRモード</h2>
+<div id="outline-container-org0a33d71" class="outline-2">
+<h2 id="org0a33d71"><span class="section-number-2">7.</span> 抽象化で重要だと考えるLモードとRモード</h2>
 <div class="outline-text-2" id="text-7">
 <ul class="org-ul">
+<li>CPU#1：フォンノイマン型（線形・遅い）
+<ul class="org-ul">
+<li>Lモード=人間が意識して論理的に考えるプロセス。手順的で、時間がかかるけど制御できる。</li>
+</ul></li>
+<li>CPU#2：DSP（非線形・高速）
+<ul class="org-ul">
+<li>Rモード=無意識的な連想・ひらめき・パターン処理。速いけど「自分で制御できない」。</li>
+</ul></li>
+<li>メモリ
+<ul class="org-ul">
+<li>意識に上げられる情報量。CPU#1とCPU#2のやりとりの結果がここに現れる。</li>
+</ul></li>
+</ul>
+
+<div id="orge558c32" class="figure">
+<p><img src="../../static/img/20250827122230.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;3:  </span>LモードとRモード（議論を醸す図）</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc923c87" class="outline-2">
+<h2 id="orgc923c87"><span class="section-number-2">8.</span> Rモードの活用方法</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>モーニングページ（朝起きてすぐに3ページ思いついたことを書け）</li>
 <li>一旦問題から離れることで脳が勝手に整理する。</li>
-<li>本は概要だけ掴んで、後で再読→記憶が強化される。</li>
+<li>本は概要だけ掴んで、後で再読→勝手に脳内で整理されて、呼び起こすことで記憶が強化される。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org35ac7c1" class="outline-2">
-<h2 id="org35ac7c1"><span class="section-number-2">8.</span> 検証</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-orgd3d407b" class="outline-2">
+<h2 id="orgd3d407b"><span class="section-number-2">9.</span> 検証</h2>
+<div class="outline-text-2" id="text-9">
 <p>
 「作って動かす」
 </p>
@@ -357,9 +407,9 @@ b.append(4) <span style="color: #989898;"># </span><span style="color: #989898;"
 </div>
 </div>
 
-<div id="outline-container-orgff542b4" class="outline-2">
-<h2 id="orgff542b4"><span class="section-number-2">9.</span> 余談：listとtupleの違い</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-org51faedf" class="outline-2">
+<h2 id="org51faedf"><span class="section-number-2">10.</span> 余談：listとtupleの違い</h2>
+<div class="outline-text-2" id="text-10">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -394,15 +444,14 @@ b.append(4) <span style="color: #989898;"># </span><span style="color: #989898;"
 </div>
 </div>
 
-<div id="outline-container-org684a016" class="outline-2">
-<h2 id="org684a016"><span class="section-number-2">10.</span> 余談：listのメソッド</h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-org0c09201" class="outline-2">
+<h2 id="org0c09201"><span class="section-number-2">11.</span> 余談：listのメソッド</h2>
+<div class="outline-text-2" id="text-11">
 <ul class="org-ul">
 <li>メソッドとは「オブジェクトに紐付いた関数」</li>
 </ul>
 <div class="org-src-container">
-<pre class="src src-python">In [5]: <span style="color: #f78fe7;">dir</span>(<span style="color: #f78fe7;">list</span>)
-Out[5]:
+<pre class="src src-python"><span style="color: #f78fe7;">dir</span>(<span style="color: #f78fe7;">list</span>)
 [<span style="color: #79a8ff;">'__add__'</span>,
  <span style="color: #79a8ff;">'__class__'</span>,
  <span style="color: #79a8ff;">'__class_getitem__'</span>,
@@ -454,9 +503,9 @@ Out[5]:
 </div>
 </div>
 </div>
-<div id="outline-container-org3c97880" class="outline-2">
-<h2 id="org3c97880"><span class="section-number-2">11.</span> tupleのメソッド</h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-org2b20615" class="outline-2">
+<h2 id="org2b20615"><span class="section-number-2">12.</span> 余談：tupleのメソッド</h2>
+<div class="outline-text-2" id="text-12">
 <ul class="org-ul">
 <li>tupleにappendメソッドは存在しない</li>
 </ul>
@@ -501,9 +550,9 @@ Out[5]:
 </div>
 </div>
 </div>
-<div id="outline-container-org7d8e113" class="outline-2">
-<h2 id="org7d8e113"><span class="section-number-2">12.</span> 余談：アンダースコアで囲まれた属性って何？</h2>
-<div class="outline-text-2" id="text-12">
+<div id="outline-container-org31920a2" class="outline-2">
+<h2 id="org31920a2"><span class="section-number-2">13.</span> 余談：アンダースコアで囲まれた属性って何？</h2>
+<div class="outline-text-2" id="text-13">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #00d3d0;">a</span> = [1, 2]
 
@@ -520,9 +569,9 @@ Out[5]:
 </div>
 
 
-<div id="outline-container-orgdcf8216" class="outline-2">
-<h2 id="orgdcf8216"><span class="section-number-2">13.</span> 生成AIの活用</h2>
-<div class="outline-text-2" id="text-13">
+<div id="outline-container-org5f75711" class="outline-2">
+<h2 id="org5f75711"><span class="section-number-2">14.</span> 生成AIの活用</h2>
+<div class="outline-text-2" id="text-14">
 <ul class="org-ul">
 <li>情報収集を爆速化できる</li>
 <li>鵜呑みは危険（必ず、検証を自分で行う）</li>
@@ -531,27 +580,27 @@ Out[5]:
 </div>
 </div>
 
-<div id="outline-container-org61e873a" class="outline-2">
-<h2 id="org61e873a"><span class="section-number-2">14.</span> タスク管理と時間配分</h2>
-<div class="outline-text-2" id="text-14">
+<div id="outline-container-org21ebcde" class="outline-2">
+<h2 id="org21ebcde"><span class="section-number-2">15.</span> タスク管理と時間配分</h2>
+<div class="outline-text-2" id="text-15">
 <ul class="org-ul">
-<li>ステークホルダーや家庭状況で優先度は変化する</li>
-<li>判断基準を「自分が後悔しないライン」に置く</li>
-<li>集中力の必要なタスクを朝に持ってくる。</li>
+<li>ステークホルダーや家庭状況でタスク優先度は変化する、最適解はない。</li>
+<li>判断基準を「自分が後悔しないライン」として納得解にする</li>
+<li>集中力の必要なタスクを朝に持ってくる。ポモドーロタイマーで時間を区切る。</li>
+<li>「完璧を目指さない」（手を抜くではない）</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgb496478" class="outline-2">
-<h2 id="orgb496478"><span class="section-number-2">15.</span> まとめ</h2>
-<div class="outline-text-2" id="text-15">
+<div id="outline-container-org626efb8" class="outline-2">
+<h2 id="org626efb8"><span class="section-number-2">16.</span> まとめ</h2>
+<div class="outline-text-2" id="text-16">
 <ul class="org-ul">
 <li>知的生産サイクルを意識することで学びが深まる</li>
 <li>Pythonは「コードで検証できる」ので知的生産に向いている</li>
 <li>生成AIはサイクルを速く回す強力な道具</li>
 <li>でも理解（抽象化）は時間がかかるボトルネックなので、朝に持ってくる。</li>
 </ul>
-
 
 <script>
   let current = 0;
