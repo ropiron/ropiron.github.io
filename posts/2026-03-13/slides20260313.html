@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<!-- 2026-03-13 金 19:49 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="precision3660-3" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<style>
+body {
+  margin: 0;
+  padding: 4%;
+  background: #fff;
+  color: #333;
+  font-family: "Meiryo", "Verdana", "Helvetica", "Tahoma", sans-serif;
+  font-size: 180%;     /* 全体の文字を拡大 */
+  line-height: 1.6;    /* 行間を広めに */
+}
+
+h1 {
+  font-size: 250%;
+  background-color: #edf2ff;
+  border-left: 25px solid #9fb7d4;
+  border-right: 25px solid #9fb7d4;
+  border-top: 1px solid #9fb7d4;
+  border-bottom: 1px solid #9fb7d4;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 200%;
+  background-color: #edf2ff;
+  border-left: 25px solid #9fb7d4;
+  border-top: 1px solid #9fb7d4;
+  border-bottom: 1px solid #9fb7d4;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+}
+
+ul {
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+pre, blockquote {
+  margin: 2% 0%;
+  padding: 2%;
+  border: 1px solid #9fb7d4;
+  background: #edf2ff;
+}
+
+</style>
+
+<div id="outline-container-org1c14ae2" class="outline-2">
+<h2 id="org1c14ae2"><span class="section-number-2">1.</span> 自己紹介</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>さんのみや</li>
+<li>広島県在住</li>
+<li>道路設計CADの会社に勤務(20人規模)</li>
+<li>道路排水設計にオープンCAEを使う活動</li>
+<li>OpenFOAMのinterFoam使ってます．</li>
+</ul>
+
+<div id="org25b3ce9" class="figure">
+<p><img src="../../static/img/20260313190128.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;1:  </span>広島県</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge78876b" class="outline-2">
+<h2 id="orge78876b"><span class="section-number-2">2.</span> なぜ土木の業界でCAE</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>道路排水の問題を解決したい（建前）</li>
+<li>社長や部長がやれと命じるから（本音）</li>
+<li>キャリアのため（論文とか，CAEソフトウェア開発とか）</li>
+<li>第一人者になれそうな気がする（モチベーション）</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8693f92" class="outline-2">
+<h2 id="org8693f92"><span class="section-number-2">3.</span> 余談ですが・・・</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>計算力学技術者試験の熱流体1級に合格（ヤッタ！）</li>
+<li>論文掲載されました（土木学会　応用力学論文集※１）</li>
+<li>前職では自動車の排気系の設計CAEやってました（3次元・1次元の熱流体，排気音, STAR-CCM+, GT-Suite）</li>
+<li>肩書：Webエンジニア（SE，PG），流体（開水路流れ）のイチ研究者</li>
+<li>仕事1：WebGISの開発</li>
+<li>仕事2：排水シミュレーションの研究開発</li>
+<li>※１：三宮 広之, 内田 龍彦, 森 一起, 道路排水施設を想定した急勾配水路における水面形と圧力分布の数値解析のVeriﬁcation &amp;Validation, 土木学会論文集, 2026, 82 巻, 15 号</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb61adc4" class="outline-2">
+<h2 id="orgb61adc4"><span class="section-number-2">4.</span> 目次</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>解きたい課題と方法</li>
+<li>既往研究・斜め跳水の理論の調査</li>
+<li>OpenFOAMで斜め跳水を計算してみた</li>
+<li>結論</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org05318e2" class="outline-2">
+<h2 id="org05318e2"><span class="section-number-2">5.</span> 解きたい課題と方法</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>法面排水の合流部</li>
+<li>豪雨に伴い，溢水が法面崩壊を招く</li>
+<li>OpenFOAMなどオープンCAEで豪雨時の溢水を予測したい，予測限界を知りたい．</li>
+</ul>
+
+
+<div id="org149d5c3" class="figure">
+<p><img src="../../static/img/20260310100938.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;2:  </span>道路法面の模式図</p>
+</div>
+
+
+<div id="org4a49ce9" class="figure">
+<p><img src="../../static/img/20260310101024.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;3:  </span>従来の設計方法（等流を前提）</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7b459a3" class="outline-2">
+<h2 id="org7b459a3"><span class="section-number-2">6.</span> 既往研究：法面排水の水理実験動画</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>法面排水構造物の合流箇所で起きる現象は斜め跳水（仮説）</li>
+<li>複雑な流れ場を解く前に斜め跳水の理解を深める</li>
+<li>OpenFOAMで計算（流れの偏向による斜め跳水，合流は後日計算を行う）</li>
+</ul>
+
+
+<div id="org3bc23e4" class="figure">
+<p><img src="../../static/img/20260309190447.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;4:  </span>インフラテック様が実施した水理実験画像※１</p>
+</div>
+
+
+<div id="org6bead12" class="figure">
+<p><img src="../../static/img/20260312122352.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;5:  </span>Mignotが実施した実験概要（射流の合流）</p>
+</div>
+
+
+<div id="orgc8c1dcf" class="figure">
+<p><img src="../../static/img/20260312122535.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;6:  </span>射流の合流箇所で発生した斜め跳水</p>
+</div>
+
+
+<div id="orgc9bf447" class="figure">
+<p><img src="../../static/img/20260312124040.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;7:  </span>合流箇所から水路下流部かけて測定された水深分布（斜め跳水が反射）</p>
+</div>
+
+
+<div id="org3805da0" class="figure">
+<p><img src="../../static/img/20260312123952.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;8:  </span>Sudden Eddying</p>
+</div>
+
+<ul class="org-ul">
+<li>※1:インフラテック様のYoutube動画からスクショ画像取得</li>
+<li><a href="https://www.youtube.com/watch?v=CkPWiZrFR9o">https://www.youtube.com/watch?v=CkPWiZrFR9o</a></li>
+<li><a href="https://www.infratec.co.jp/images/contents/pdt/2647/.pdf">https://www.infratec.co.jp/images/contents/pdt/2647/.pdf</a></li>
+<li>※2:参考文献：Mignot, E. and Rivière, N. and Perkins, R. and Paquier, A.: Flow Patterns in a Four-Branch Junction with Supercritical Flow, Journal of Hydraulic Engineering, Vol. 134, pp. 701-713, 2008</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org073a284" class="outline-2">
+<h2 id="org073a284"><span class="section-number-2">7.</span> 斜め跳水とは</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>合流や水路の偏向に伴い，流速ベクトルの大きさが減少→水面の上昇</li>
+<li>波源は同心円状に広がり，円の接線状に不連続な波が重なった結果，一本の線に見える．</li>
+<li>下記の数式はArthur T. Ippenの原著論文より拝借</li>
+</ul>
+
+
+<div id="org0837ac8" class="figure">
+<p><img src="../../static/img/20260312133057.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;9:  </span>斜め跳水の発生メカニズム</p>
+</div>
+
+
+<div id="org8e3d034" class="figure">
+<p><img src="../../static/img/20260312112330.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;10:  </span>斜め跳水発生前後流速ベクトル</p>
+</div>
+
+
+<div id="org0c87efc" class="figure">
+<p><img src="../../static/img/20260312113102.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;11:  </span>連続式(斜め跳水の法線方向)</p>
+</div>
+
+
+<div id="org9b49a85" class="figure">
+<p><img src="../../static/img/20260312113339.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;12:  </span>運動量保存則(斜め跳水の法線方向)</p>
+</div>
+
+
+<div id="org9769a96" class="figure">
+<p><img src="../../static/img/20260312112904.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;13:  </span>v1nとv1tの関係</p>
+</div>
+
+
+<div id="org7f5772f" class="figure">
+<p><img src="../../static/img/20260312112952.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;14:  </span>v2nとv2tの関係</p>
+</div>
+
+
+<div id="org8ce7a97" class="figure">
+<p><img src="../../static/img/20260312113624.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;15:  </span>運動量の変化生じない接線方向の流速</p>
+</div>
+
+
+<div id="org7082f20" class="figure">
+<p><img src="../../static/img/20260312114322.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;16:  </span>tangent theta（この式からβを求めるのは困難）</p>
+</div>
+
+
+<div id="org11fbd0d" class="figure">
+<p><img src="../../static/img/20260313180455.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;17:  </span>Graphical aid（このグラフからβやh2/h1を求める．）</p>
+</div>
+
+<ul class="org-ul">
+<li>参考文献：Ippen, A.: High-Velocity Flow in Open Channels: A Symposium: Mechanics of Supercritical Flow, Transactions of the American Society of Civil Engineers, Vol. 116, pp. 268-295, 1951</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb478aed" class="outline-2">
+<h2 id="orgb478aed"><span class="section-number-2">8.</span> OpenFOAMを用いた既往研究</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>Fr数2，比較的小さいサイズの実験水路</li>
+<li>側壁の波の水深分布を予測</li>
+<li>OpenFOAMのinterFoamにて，円形カーブで発生する斜め跳水の再現を行った．</li>
+<li>誤差6%程度</li>
+<li>参考文献：Kadia, S., Larsson, I.A.S., Billstein, M. et al.:Experimental and numerical investigations of the water surface profile and wave extrema of supercritical flows in a narrow channel bend. Sci Rep 14, 12247 (2024)</li>
+<li><a href="https://www.nature.com/articles/s41598-024-61297-8#citeas">https://www.nature.com/articles/s41598-024-61297-8#citeas</a></li>
+</ul>
+
+
+<div id="org8922eaa" class="figure">
+<p><img src="../../static/img/20260313182042.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;18:  </span>実験装置</p>
+</div>
+
+
+<div id="orge1b286a" class="figure">
+<p><img src="../../static/img/20260313181807.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;19:  </span>乱流モデルはk-epsilon RNGがよいとのこと</p>
+</div>
+
+
+<div id="orga4c66f2" class="figure">
+<p><img src="../../static/img/20260313184929.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;20:  </span>最大水深と波の位置が±6パーセント以内</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc33cff0" class="outline-2">
+<h2 id="orgc33cff0"><span class="section-number-2">9.</span> OpenFOAMで斜め跳水の再現を行う設定</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>目標は，ippenの理論式の斜め跳水の角度とOpenFOAMの斜め跳水の角度を比較</li>
+<li>blockMeshにてメッシュ生成</li>
+<li>フルード数3.5，入口水深を固定（h0=0.02）</li>
+<li>計算結果が早くほしいので，比較的小さな計算領域</li>
+<li>実験値との比較は行わない，理論値とOpenFOAMを比較して理論を深く理解すること</li>
+<li>水面にAMR（Adaptive Mesh Reifinement）適用(1/2刻み)</li>
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">設定項目</td>
+<td class="org-left">内容</td>
+</tr>
+
+<tr>
+<td class="org-left">ソルバー</td>
+<td class="org-left">interFoam</td>
+</tr>
+
+<tr>
+<td class="org-left">格子幅[mm]</td>
+<td class="org-left">10</td>
+</tr>
+
+<tr>
+<td class="org-left">時間刻み幅[s]</td>
+<td class="org-left">自動調整（最大クーラン数：0.9）</td>
+</tr>
+
+<tr>
+<td class="org-left">シミュレーション時間[s]</td>
+<td class="org-left">60</td>
+</tr>
+
+<tr>
+<td class="org-left">乱流モデル</td>
+<td class="org-left">標準k-epsilon</td>
+</tr>
+
+<tr>
+<td class="org-left">並列計算</td>
+<td class="org-left">24</td>
+</tr>
+</tbody>
+</table>
+
+
+<div id="org00ab7a9" class="figure">
+<p><img src="../../static/img/20260313183745.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;21:  </span>計算モデル寸法</p>
+</div>
+
+
+<div id="org1cd4397" class="figure">
+<p><img src="../../static/img/20260312152430.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;22:  </span>境界条件</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org29f5472" class="outline-2">
+<h2 id="org29f5472"><span class="section-number-2">10.</span> OpenFOAMで斜め跳水の再現を行った結果</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>定性的に水路の偏向後に斜め跳水が発生することが確認できた．</li>
+<li>斜め跳水の角度beta, Reference：46.63°，測定結果：53.25°</li>
+<li>斜め跳水の水深h2, Reference：0.0560m ，測定結果：0.0564m</li>
+<li>学んだこと，分析前は，流入口の条件で角度が決まると思っていたが，斜め跳水の発生前の値で角度を算出する必要がある</li>
+<li>h1=0.0272m</li>
+</ul>
+
+
+<div id="org526c3b0" class="figure">
+<p><img src="../../static/img/20260313191942.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;23:  </span>水面のコンター図</p>
+</div>
+
+
+
+<div id="org0463b42" class="figure">
+<p><img src="../../static/img/20260313193649.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;24:  </span>尾根線を描画，角度を算出(26.63度)</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org63e065d" class="outline-2">
+<h2 id="org63e065d"><span class="section-number-2">11.</span> 結論</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li>論文と教科書も読んで，実際にシミュレーション流して，理論と計算を比較</li>
+<li>理論値は摩擦なし，乱流なしのポテンシャル流を想定</li>
+<li>数値解析は摩擦有り，乱流モデルありのため単純な比較は難しい</li>
+<li>ひとまず，斜め跳水の再現と角度βの算出ができた．</li>
+</ul>
+
+
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll('.outline-2');
+  slides.forEach((s, i) => s.style.display = i === 0 ? 'block' : 'none');
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' && current < slides.length - 1) {
+      slides[current++].style.display = 'none';
+      slides[current].style.display = 'block';
+    } else if (e.key === 'ArrowLeft' && current > 0) {
+      slides[current--].style.display = 'none';
+      slides[current].style.display = 'block';
+    }
+  });
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>
