@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<!-- 2026-05-22 金 17:25 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="precision3660-3" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<style>
+body {
+  margin: 0;
+  padding: 4%;
+  background: #fff;
+  color: #333;
+  font-family: "Meiryo", "Verdana", "Helvetica", "Tahoma", sans-serif;
+  font-size: 160%;     /* 全体の文字を拡大 */
+  line-height: 1.6;    /* 行間を広めに */
+}
+
+h1 {
+  font-size: 250%;
+  background-color: #edf2ff;
+  border-left: 25px solid #9fb7d4;
+  border-right: 25px solid #9fb7d4;
+  border-top: 1px solid #9fb7d4;
+  border-bottom: 1px solid #9fb7d4;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 200%;
+  background-color: #edf2ff;
+  border-left: 25px solid #9fb7d4;
+  border-top: 1px solid #9fb7d4;
+  border-bottom: 1px solid #9fb7d4;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+}
+
+ul {
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+pre, blockquote {
+  margin: 2% 0%;
+  padding: 2%;
+  border: 1px solid #9fb7d4;
+  background: #edf2ff;
+}
+
+	table {
+    font-size: 100%;
+    border-collapse: collapse;
+    margin: .5em 0;
+	margin-top: 1.5em; /* 上部の余白を大きくする */
+	margin-bottom: 1.5em; /* 上部の余白を大きくする */
+}
+
+th, td {
+    border: 1px solid #777;
+    padding: .3em;
+    margin: 2px;
+}
+th {
+    background: #eee;
+}
+
+</style>
+
+<div id="outline-container-org59d234e" class="outline-2">
+<h2 id="org59d234e"><span class="section-number-2">1.</span> shallowwaterfoamの調査</h2>
+</div>
+
+<div id="outline-container-orgbad8336" class="outline-2">
+<h2 id="orgbad8336"><span class="section-number-2">2.</span> 自己紹介</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>さんのみや</li>
+<li>道路設計CADの会社でSE</li>
+<li>OpenFOAMをよく使う</li>
+<li>開水路流れのシミュレーションがメイン</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8cce9ce" class="outline-2">
+<h2 id="org8cce9ce"><span class="section-number-2">3.</span> 目次</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>動機：なぜshallowwaterfoamを調査するのか</li>
+<li>shallowwaterfoamとinterFoamとの比較</li>
+<li>浅水流方程式の本質：水深積分</li>
+<li>shallowwaterfoamのTutorial
+<ul class="org-ul">
+<li>shallowwaterfoamの支配方程式</li>
+<li>メッシュ</li>
+<li>境界条件・初期条件</li>
+<li>数値スキーム（fvSchemes）の説明</li>
+<li>計算設定ファイル（fvSolution）</li>
+<li>計算実行</li>
+</ul></li>
+<li>計算結果の解説</li>
+<li>メッシュを細分化して結果を比較</li>
+<li>結論</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7c807d2" class="outline-2">
+<h2 id="org7c807d2"><span class="section-number-2">4.</span> 動機：なぜshallowwaterfoamを調査するのか</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>土木は計算の対象となる地形や時間が膨大，3次元流体解析は計算リソースの観点で非現実的</li>
+<li>次元を落としても本質を見失わずに予測を行う方法を調査したい（interFoam→shallowwaterfoam）</li>
+<li>ちなみに河川分野はiRICが河川の設計に普及しつつある．</li>
+<li>※iRIC:International River Interface Cooperative</li>
+</ul>
+
+
+<div id="orgaf18987" class="figure">
+<p><img src="../../static/img/20260522150349.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;1:  </span>iRICのホームページより拝借（<a href="https://i-ric.org/about/">https://i-ric.org/about/</a>）</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1a21e65" class="outline-2">
+<h2 id="org1a21e65"><span class="section-number-2">5.</span> shallowwaterfoamとinterFoamとの比較</h2>
+<div class="outline-text-2" id="text-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">3次元VOF法</td>
+<td class="org-left">浅水流方程式</td>
+</tr>
+
+<tr>
+<td class="org-left">連続式</td>
+<td class="org-left"><img src="../../static/img/20260522150513.png" alt="20260522150513.png" /></td>
+<td class="org-left"><img src="../../static/img/20260522150601.png" alt="20260522150601.png" /></td>
+</tr>
+
+<tr>
+<td class="org-left">Navier-Stokes</td>
+<td class="org-left"><img src="../../static/img/20260522150757.png" alt="20260522150757.png" /></td>
+<td class="org-left"><img src="../../static/img/20260522150712.png" alt="20260522150712.png" /></td>
+</tr>
+
+<tr>
+<td class="org-left">VOF移流方程式</td>
+<td class="org-left"><img src="../../static/img/20260522150843.png" alt="20260522150843.png" /></td>
+<td class="org-left">なし</td>
+</tr>
+
+<tr>
+<td class="org-left">計算時間</td>
+<td class="org-left">遅い（3次元メッシュ＋界面捕獲）</td>
+<td class="org-left">早い（2次元メッシュ＋液面計算不要）</td>
+</tr>
+
+<tr>
+<td class="org-left">正確さ</td>
+<td class="org-left">高い（波の砕波，3次元的な渦も解ける）</td>
+<td class="org-left">低い（波の砕波，3次元的な渦は苦手）</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-org5ef264a" class="outline-2">
+<h2 id="org5ef264a"><span class="section-number-2">6.</span> 浅水流方程式の本質：水深積分</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>3次元流体は鉛直方向にも多くのメッシュ生成を行う</li>
+<li>浅水流方程式は，鉛直（z軸）方向を1メッシュに積分したもの</li>
+</ul>
+
+<div id="orgcda85bf" class="figure">
+<p><img src="../../static/img/20260522151454.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;2:  </span>水深積分（ライプニッツルール）の説明</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc2188eb" class="outline-2">
+<h2 id="orgc2188eb"><span class="section-number-2">7.</span> shallowwaterfoamのTutorial</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>OpenFOAM10にshallowwaterfoamのチュートリアルとそのドキュメントで学習</li>
+<li><a href="https://www.tfd.chalmers.se/~hani/kurser/OS_CFD_2010/johanPilqvist/johanPilqvistReport.pdf">https://www.tfd.chalmers.se/~hani/kurser/OS_CFD_2010/johanPilqvist/johanPilqvistReport.pdf</a></li>
+<li>ちなみに，あまりshallowwaterfoamについて解説している記事を見かけないのでレアかもしれません．</li>
+<li>このドキュメントは2010年11月にピアレビューを終えているようです．</li>
+</ul>
+
+<div id="org40790fe" class="figure">
+<p><img src="../../static/img/20260522153859.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;3:  </span>20260522153859</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org84d38b5" class="outline-2">
+<h2 id="org84d38b5"><span class="section-number-2">8.</span> shallowwaterfoamの支配方程式</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>資料作成の時間がなく，モロパクリで申し訳ございません</li>
+<li>コリオリ力が考慮されているようです．</li>
+</ul>
+
+
+<div id="org9591ba1" class="figure">
+<p><img src="../../static/img/20260522151906.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;4:  </span>支配方程式</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org2723051" class="outline-2">
+<h2 id="org2723051"><span class="section-number-2">9.</span> メッシュ</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>1m×1mの計算領域</li>
+<li>20×20</li>
+<li>メッシュサイズは0.05m</li>
+<li>鉛直方向には0．1m</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">メッシュの外観1</td>
+<td class="org-left">メッシュの外観2</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="../../static/img/20260522153611.png" alt="20260522153611.png" /></td>
+<td class="org-left"><img src="../../static/img/20260522153723.png" alt="20260522153723.png" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-orga183d19" class="outline-2">
+<h2 id="orga183d19"><span class="section-number-2">10.</span> 境界条件・初期条件</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>h0は地形の高さ，障害物が計算領域の中央にある（0.45,0.45,0）,(0.55,0.55,0.1)にh0=0.01</li>
+<li>hは水深（h0からの高さ）で全領域で0.01mになるように設定してある．</li>
+<li>hUは流量を意味するhU=0.001m^2/s</li>
+<li>U=hU/h=0.1m/sと計算できる．</li>
+<li>出口に水深を固定，入口に流量固定</li>
+</ul>
+
+
+<div id="org9c81efa" class="figure">
+<p><img src="../../static/img/20260522162025.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;5:  </span>計算領域および障害物の寸法</p>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">&#34920;1:</span> 境界条件</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">inlet</td>
+<td class="org-right">outlet</td>
+<td class="org-left">sides</td>
+</tr>
+
+<tr>
+<td class="org-left">h</td>
+<td class="org-right">zeroGradient</td>
+<td class="org-right">0.01</td>
+<td class="org-left">zeroGradient</td>
+</tr>
+
+<tr>
+<td class="org-left">hU</td>
+<td class="org-right">0.001</td>
+<td class="org-right">zeroGradient</td>
+<td class="org-left">slip</td>
+</tr>
+
+<tr>
+<td class="org-left">hTotal</td>
+<td class="org-right">0.01</td>
+<td class="org-right">0.01</td>
+<td class="org-left">0.01</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-org27e9ef5" class="outline-2">
+<h2 id="org27e9ef5"><span class="section-number-2">11.</span> 数値スキーム（fvSchemes）の説明</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li>時刻の計算はクランクニコルソンで0.9の係数で安定化している（1.0で完全なクランクニコルソン）．</li>
+<li>移流項は，Gauss linearで中心差分</li>
+<li>LUSTは linear (75%) + linearUpwind (25%) のブレンドスキーム</li>
+</ul>
+
+<pre class="example">
+ddtSchemes
+{
+    default         CrankNicolson 0.9;
+}
+
+gradSchemes
+{
+    default         Gauss linear;
+}
+
+divSchemes
+{
+    default         none;
+    div(phiv,hU)    Gauss LUST un;
+}
+
+laplacianSchemes
+{
+    default         Gauss linear uncorrected;
+}
+
+interpolationSchemes
+{
+    default         linear;
+}
+
+snGradSchemes
+{
+    default         uncorrected;
+}
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgd899fbe" class="outline-2">
+<h2 id="orgd899fbe"><span class="section-number-2">12.</span> 計算設定ファイル（fvSolution）</h2>
+<div class="outline-text-2" id="text-12">
+<ul class="org-ul">
+<li>Geminiの情報
+<ul class="org-ul">
+<li>PCG（共役勾配法）+DIC（対角不完全コレッキー分解）</li>
+<li>PBiCG（双共役勾配法）+DILU（対角不完全LU分解）</li>
+</ul></li>
+</ul>
+
+<pre class="example">
+solvers
+{
+    h
+    {
+        solver          PCG;
+        preconditioner  DIC;
+        tolerance       1e-10;
+        relTol          0.01;
+    }
+
+    hFinal
+    {
+        $h;
+        tolerance       1e-10;
+        relTol          0;
+    }
+
+    hU
+    {
+        solver          smoothSolver;
+        smoother        GaussSeidel;
+        tolerance       1e-10;
+        relTol          0.1;
+    }
+
+    hUFinal
+    {
+        $hU;
+        tolerance       1e-10;
+        relTol          0;
+    }
+}
+
+PIMPLE
+{
+    nOuterCorrectors 3;
+    nCorrectors      1;
+    nNonOrthogonalCorrectors 0;
+
+    momentumPredictor yes;
+}
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgec233b7" class="outline-2">
+<h2 id="orgec233b7"><span class="section-number-2">13.</span> 計算結果の解説</h2>
+<div class="outline-text-2" id="text-13">
+<ul class="org-ul">
+<li>同心円状に波が広がる様相が確認できた．</li>
+<li>障害物の上で流速が高い状態であるとして，その早い流れが障害物を通過すると遅い流れにぶつかるので水面が上がる．</li>
+<li>水面の上がり方は障害物を中心として発生し，その波は0.1m/sの流速で運ばれる</li>
+</ul>
+
+<div id="orgfedf510" class="figure">
+<p><img src="../../static/img/20260522164414.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;6:  </span>0.1s</p>
+</div>
+
+<div id="org7e60e2f" class="figure">
+<p><img src="../../static/img/20260522164452.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;7:  </span>0.2s</p>
+</div>
+
+<div id="org4ec721a" class="figure">
+<p><img src="../../static/img/20260522164538.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;8:  </span>0.3s</p>
+</div>
+
+<div id="org6290db7" class="figure">
+<p><img src="../../static/img/20260522164612.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;9:  </span>0.4s</p>
+</div>
+
+<div id="orge4de82f" class="figure">
+<p><img src="../../static/img/20260522164941.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;10:  </span>0.5s</p>
+</div>
+
+<div id="org475c553" class="figure">
+<p><img src="../../static/img/20260522165010.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;11:  </span>0.6s</p>
+</div>
+
+<div id="org9dac5d9" class="figure">
+<p><img src="../../static/img/20260522165052.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;12:  </span>0.7s</p>
+</div>
+
+
+<div id="orgd64d787" class="figure">
+<p><img src="../../static/img/20260522165121.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;13:  </span>0.8s</p>
+</div>
+
+
+<div id="org1c433ad" class="figure">
+<p><img src="../../static/img/20260522165149.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;14:  </span>0.9s</p>
+</div>
+
+
+<div id="org67d912b" class="figure">
+<p><img src="../../static/img/20260522165227.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;15:  </span>1.0s</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7b580a0" class="outline-2">
+<h2 id="org7b580a0"><span class="section-number-2">14.</span> メッシュを細分化して結果を比較</h2>
+<div class="outline-text-2" id="text-14">
+<ul class="org-ul">
+<li>メッシュを細かくすると，メッシュが粗い場合よりも波の大きさが小さい</li>
+<li>メッシュサイズを細かくするほど厳密解に近づくという理解なので，チュートリアルのメッシュ数は粗いと考える．</li>
+</ul>
+
+
+<div id="org667b74e" class="figure">
+<p><img src="../../static/img/20260522165537.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;16:  </span>メッシュ数20x20と80x80（1 s）</p>
+</div>
+
+
+<div id="org0cd0c54" class="figure">
+<p><img src="../../static/img/20260522165725.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;17:  </span>メッシュ数20x20と80x80（1.5 s）</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbd45cd5" class="outline-2">
+<h2 id="orgbd45cd5"><span class="section-number-2">15.</span> 結論</h2>
+<div class="outline-text-2" id="text-15">
+<ul class="org-ul">
+<li>shallowwaterfoamの以下の理解が得られた
+<ul class="org-ul">
+<li>浅水流方程式：鉛直方向に水深積分した基礎方程式</li>
+<li>基本パラメータh（平均水深，h0からの距離）,h0（障害物の高さ）,hU（単位幅あたりの流量）</li>
+<li>境界条件と初期条件</li>
+<li>計算結果の解釈方法（障害物の上を通過した早い流れが遅い流れとぶつかり，水深が上がる）</li>
+</ul></li>
+<li>今後の予定
+<ul class="org-ul">
+<li>shallowwaterfoamに摩擦項を加えて改良</li>
+<li>乱流モデルの追加</li>
+</ul></li>
+</ul>
+
+
+
+
+
+
+
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll('.outline-2');
+  slides.forEach((s, i) => s.style.display = i === 0 ? 'block' : 'none');
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' && current < slides.length - 1) {
+      slides[current++].style.display = 'none';
+      slides[current].style.display = 'block';
+    } else if (e.key === 'ArrowLeft' && current > 0) {
+      slides[current--].style.display = 'none';
+      slides[current].style.display = 'block';
+    }
+  });
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>
