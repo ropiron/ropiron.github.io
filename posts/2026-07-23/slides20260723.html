@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<!-- 2026-07-24 金 16:51 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="precision3660-3" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<style>
+body {
+  margin: 0;
+  padding: 4%;
+  background: #fff;
+  color: #333;
+  font-family: "Meiryo", "Verdana", "Helvetica", "Tahoma", sans-serif;
+  font-size: 160%;     /* 全体の文字を拡大 */
+  line-height: 1.6;    /* 行間を広めに */
+}
+
+h1 {
+  font-size: 250%;
+  background-color: #edf2ff;
+  border-left: 25px solid #9fb7d4;
+  border-right: 25px solid #9fb7d4;
+  border-top: 1px solid #9fb7d4;
+  border-bottom: 1px solid #9fb7d4;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 200%;
+  background-color: #edf2ff;
+  border-left: 25px solid #9fb7d4;
+  border-top: 1px solid #9fb7d4;
+  border-bottom: 1px solid #9fb7d4;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+}
+
+ul {
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+pre, blockquote {
+  margin: 2% 0%;
+  padding: 2%;
+  border: 1px solid #9fb7d4;
+  background: #edf2ff;
+}
+
+	table {
+    font-size: 100%;
+    border-collapse: collapse;
+    margin: .5em 0;
+	margin-top: 1.5em; /* 上部の余白を大きくする */
+	margin-bottom: 1.5em; /* 上部の余白を大きくする */
+}
+
+th, td {
+    border: 1px solid #777;
+    padding: .3em;
+    margin: 2px;
+}
+th {
+    background: #eee;
+}
+
+</style>
+
+<div id="outline-container-orgc7b6d93" class="outline-2">
+<h2 id="orgc7b6d93"><span class="section-number-2">1.</span> shallowwaterfoamで跳水を解いた話</h2>
+</div>
+
+<div id="outline-container-org3dca235" class="outline-2">
+<h2 id="org3dca235"><span class="section-number-2">2.</span> 自己紹介</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>さんのみや</li>
+<li>道路設計CADの会社でSE（Web系エンジニア）</li>
+<li>OpenFOAMをよく使う</li>
+<li>開水路流れのシミュレーションがメイン</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4a6dda1" class="outline-2">
+<h2 id="org4a6dda1"><span class="section-number-2">3.</span> 目次</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>数値解析で実現したいこと</li>
+<li>前回の内容
+<ul class="org-ul">
+<li>底面摩擦項について</li>
+<li>浅水流方程式の乱流モデルについて</li>
+</ul></li>
+<li>shallowWaterFoamで跳水を解いてみた
+<ul class="org-ul">
+<li>跳水について</li>
+<li>目的：shallowWaterFoamの結果を跳水の理論式と比較したい</li>
+<li>計算条件</li>
+<li>計算結果</li>
+<li>考察</li>
+</ul></li>
+<li>実践編：自宅で水理実験
+<ul class="org-ul">
+<li></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7703471" class="outline-2">
+<h2 id="org7703471"><span class="section-number-2">4.</span> 数値解析で実現したいこと</h2>
+<div class="outline-text-2" id="text-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">道路法面の模式図</td>
+<td class="org-left">開水路流れのネットワーク解析</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="../../static/img/20260310100938.png" alt="20260310100938.png" /></td>
+<td class="org-left"><img src="../../static/img/20260723100556.png" alt="20260723100556.png" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org9ce1570" class="outline-2">
+<h2 id="org9ce1570"><span class="section-number-2">5.</span> 前回の内容</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>浅水流方程式（平面2次元）とは，鉛直方向に水深積分した基礎方程式</li>
+<li>次の予定：①shallowwaterfoamに底面摩擦項を加えて改良，②乱流モデルの追加</li>
+</ul>
+
+
+<div id="org29bf508" class="figure">
+<p><img src="../../static/img/20260723095021.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;1:  </span>3次元と平面二次元の連続式と運動方程式</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9d3b054" class="outline-2">
+<h2 id="org9d3b054"><span class="section-number-2">6.</span> 底面摩擦項について</h2>
+<div class="outline-text-2" id="text-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">連続式</td>
+<td class="org-left">運動方程式x方向</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="../../static/img/20260723180514.png" alt="20260723180514.png" /></td>
+<td class="org-left"><img src="../../static/img/20260723180544.png" alt="20260723180544.png" /></td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>底面摩擦項（マニング則を用いる場合）
+<ul class="org-ul">
+<li>x軸方向</li>
+</ul></li>
+</ul>
+
+<p>
+\[\left( \frac{\tau_x}{\rho} \right)_b = \frac{gn^2 U \sqrt{U^2 + V^2}}{h^{4/3}}\]
+</p>
+
+<ul class="org-ul">
+<li>y軸方向</li>
+</ul>
+
+<p>
+\[\left( \frac{\tau_y}{\rho} \right)_b = \frac{gn^2 V \sqrt{U^2 + V^2}}{h^{4/3}}\]
+</p>
+
+
+<ul class="org-ul">
+<li>底面摩擦項（表面摩擦係数 \(C_f\) を用いる場合）
+<ul class="org-ul">
+<li>x軸方向</li>
+</ul></li>
+</ul>
+
+<p>
+\[\left( \frac{\tau_x}{\rho} \right)_b = \frac{1}{2} C_f U \sqrt{U^2 + V^2}\]
+</p>
+
+<ul class="org-ul">
+<li>y軸方向</li>
+</ul>
+
+<p>
+\[\left( \frac{\tau_y}{\rho} \right)_b = \frac{1}{2} C_f V \sqrt{U^2 + V^2}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32e496c" class="outline-2">
+<h2 id="org32e496c"><span class="section-number-2">7.</span> 浅水流方程式の乱流モデルについて</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>さらっと説明します．</li>
+<li>河川のiRICのドキュメントより引用</li>
+<li><a href="https://i-ric.org/webadmin/wp-content/uploads/2023/06/Nays2DH_SolverManual_Japanese_v4.pdf">https://i-ric.org/webadmin/wp-content/uploads/2023/06/Nays2DH_SolverManual_Japanese_v4.pdf</a></li>
+<li>渦動粘性係数をどのように計算するかの話</li>
+</ul>
+
+
+<div id="org362afc4" class="figure">
+<p><img src="../../static/img/20260723192727.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;2:  </span>水深積分したゼロ方程式モデル</p>
+</div>
+
+
+<div id="org4d43728" class="figure">
+<p><img src="../../static/img/20260723192928.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;3:  </span>水深積分したk-epsilonモデル</p>
+</div>
+
+
+<div id="org538e841" class="figure">
+<p><img src="../../static/img/20260723193000.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;4:  </span>水深積分したk-epsilonモデル</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org4f1fd3e" class="outline-2">
+<h2 id="org4f1fd3e"><span class="section-number-2">8.</span> shallowWaterFoamで跳水を解く前に跳水について</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>跳水の簡単な説明：
+<ul class="org-ul">
+<li>水深が浅くて速い流れが，水深が深くて遅い流れに遷移する</li>
+<li>フルード数Fr&lt;1:常流，Fr&gt;1:射流</li>
+<li>跳水の発生箇所で渦が発生し，流線が不連続になる（ベルヌーイの定理が適用できない．）．</li>
+</ul></li>
+</ul>
+
+<div id="orgfc9b4bb" class="figure">
+<p><img src="../../static/img/20260724144305.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;5:  </span>跳水の模式図</p>
+</div>
+
+<ul class="org-ul">
+<li>たとえば流し台の円形跳水</li>
+</ul>
+
+<div id="org50d7a35" class="figure">
+<p><img src="../../static/img/20260723172745.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;6:  </span>流し台の円形跳水</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org595aa4e" class="outline-2">
+<h2 id="org595aa4e"><span class="section-number-2">9.</span> 目的：shallowWaterFoamの結果を跳水の理論式と比較したい</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+支配方程式：
+\[\frac{\partial}{\partial t}(h\mathbf{u}) + \nabla \cdot (h\mathbf{u}^T\mathbf{u}) + f \times h\mathbf{u} = -\vert{}\mathbf{g}\vert{}h\nabla(h + h_0)\]
+</p>
+
+<ul class="org-ul">
+<li><b>時間変化なし（定常状態）：</b>
+\(\frac{\partial}{\partial t}(h\mathbf{u}) \rightarrow 0\)</li>
+<li><b>実験室スケール（コリオリ力無視）：</b>
+\(f \times h\mathbf{u} \rightarrow 0\)</li>
+<li><b>水平な水路（障害物高さなし）：</b> \(\nabla h_0 \rightarrow 0\)</li>
+<li><b>1次元方向（X方向）のみ考える：</b> \(\nabla \rightarrow \frac{d}{dx}\) ,
+\(\mathbf{u} \rightarrow U\)</li>
+</ul>
+
+
+<p>
+\[\frac{d}{dx}(h U^2) = -g h \frac{dh}{dx}\]
+</p>
+
+
+<p>
+\[\frac{d}{dx} \left( h U^2 + \frac{1}{2} g h^2 \right) = 0\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58a82f0" class="outline-2">
+<h2 id="org58a82f0"><span class="section-number-2">10.</span> 跳水の理論式のざっくりとした説明</h2>
+<div class="outline-text-2" id="text-10">
+
+<div id="org393ac6f" class="figure">
+<p><img src="../../static/img/20260724144305.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;7:  </span>跳水の模式図</p>
+</div>
+
+<p>
+支配方程式をシンプルな形にしたもの
+\[\frac{d}{dx} \left( h U^2 + \frac{1}{2} g h^2 \right) = 0\]
+</p>
+
+
+<p>
+上式を積分すると，上流（跳水前，添字1）と下流（跳水後，添字2）で以下の関係が成り立つ
+</p>
+
+
+<p>
+\[h_1 U_1^2 + \frac{1}{2} g h_1^2 = h_2 U_2^2 + \frac{1}{2} g h_2^2 = \text{一定}\]
+</p>
+
+
+
+
+<p>
+上式をフルード数Frを使って表現すると，共役水深（h1,h2）の公式となる．
+</p>
+
+<p>
+\[h_2 = \frac{h_1}{2} \left( \sqrt{1 + 8 Fr_1^2} - 1 \right)\]
+</p>
+
+<p>
+さらに導出は省くが，上式とベルヌーイの定理を用いて跳水後のエネルギー損失Eの理論式を導出できる．
+</p>
+
+<p>
+\[\Delta E = \frac{(h_2 - h_1)^3}{4 h_1 h_2}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdeb4c33" class="outline-2">
+<h2 id="orgdeb4c33"><span class="section-number-2">11.</span> 計算条件</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li>x軸方向のみの1次元流れ解析</li>
+<li>メッシュサイズ5cm(5m/100分割)</li>
+<li>入口水深のフルード数は，約1.3</li>
+<li>シミュレーション時間：300s</li>
+</ul>
+
+
+<div id="org615438d" class="figure">
+<p><img src="../../static/img/20260723103741.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;8:  </span>寸法と初期流れ場（初期水深）</p>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">&#34920;1:</span> 境界条件</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">inlet</td>
+<td class="org-right">outlet</td>
+<td class="org-left">sides</td>
+</tr>
+
+<tr>
+<td class="org-left">h</td>
+<td class="org-right">0.01</td>
+<td class="org-right">0.01375</td>
+<td class="org-left">zeroGradient</td>
+</tr>
+
+<tr>
+<td class="org-left">hU</td>
+<td class="org-right">0.004</td>
+<td class="org-right">zeroGradient</td>
+<td class="org-left">slip</td>
+</tr>
+
+<tr>
+<td class="org-left">hTotal</td>
+<td class="org-right">0.01</td>
+<td class="org-right">0.01</td>
+<td class="org-left">0.01</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgc0c34f5" class="outline-2">
+<h2 id="orgc0c34f5"><span class="section-number-2">12.</span> 計算結果</h2>
+<div class="outline-text-2" id="text-12">
+<ul class="org-ul">
+<li>上流側と下流側の水深を固定にして，不連続な流れ場の跳水の流れ場を再現</li>
+<li>数値振動は2次精度の数値スキームによるもの</li>
+</ul>
+
+
+<div id="orgc2d2a97" class="figure">
+<p><img src="../../static/img/20260724161613.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;9:  </span>水深分布</p>
+</div>
+
+<div id="org6d8dac1" class="figure">
+<p><img src="../../static/img/20260724160258.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;10:  </span>数値スキームLust unの残差</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org2df2c7a" class="outline-2">
+<h2 id="org2df2c7a"><span class="section-number-2">13.</span> 考察</h2>
+<div class="outline-text-2" id="text-13">
+<ul class="org-ul">
+<li>共役水深の一致</li>
+<li>エネルギー損失の算出
+<ul class="org-ul">
+<li>h1=0.01,h2=0.01375</li>
+</ul></li>
+</ul>
+<p>
+\[\Delta E = \frac{(h_2 - h_1)^3}{4 h_1 h_2}=0.000096 m\]
+</p>
+<ul class="org-ul">
+<li>理論エネルギー損失: 0.000096 m(約0.096 mm)</li>
+<li>shallowWaterFoamでは，hUとhを計算しているので，この値を使ってエネルギー損失を求める．</li>
+<li>比エネルギー \(E\) の定義式は以下の通り</li>
+</ul>
+
+<p>
+\[E = h + \frac{U^2}{2g} = h + \frac{(hU)^2}{2g h^2}\]
+</p>
+<ul class="org-ul">
+<li>hUとhを使って求めたエネルギー損失：9.73e-05 m</li>
+<li>相対誤差(0.0000973-0.000096)/0.000096=0.0135(約1.4%と意外と大きい印象)</li>
+<li>この誤差は数値スキームによるものだと考えられるので，数値スキームを変更することで相対誤差を減らすことができると考える．</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org044cec3" class="outline-2">
+<h2 id="org044cec3"><span class="section-number-2">14.</span> 数値スキーム</h2>
+<div class="outline-text-2" id="text-14">
+<pre class="example">
+ddtSchemes
+{
+    default         CrankNicolson 0.9;
+}
+
+gradSchemes
+{
+    default         Gauss linear;
+}
+
+divSchemes
+{
+    default         none;
+    div(phiv,hU)    Gauss LUST un;#これを「Gauss vanLeer」に変更する．
+}
+
+laplacianSchemes
+{
+    default         Gauss linear uncorrected;
+}
+
+interpolationSchemes
+{
+    default         linear;
+}
+
+snGradSchemes
+{
+    default         uncorrected;
+}
+</pre>
+</div>
+</div>
+<div id="outline-container-org5f180b0" class="outline-2">
+<h2 id="org5f180b0"><span class="section-number-2">15.</span> 数値スキーム違いで比較してみる</h2>
+<div class="outline-text-2" id="text-15">
+
+<div id="org3585c81" class="figure">
+<p><img src="../../static/img/20260724161508.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;11:  </span>LUST un とVanLeerの違い</p>
+</div>
+
+<div id="orgdc7727d" class="figure">
+<p><img src="../../static/img/20260724160924.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;12:  </span>数値スキームVanLeerの場合の残差</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb8deef5" class="outline-2">
+<h2 id="orgb8deef5"><span class="section-number-2">16.</span> エネルギー損失の比較</h2>
+<div class="outline-text-2" id="text-16">
+<ul class="org-ul">
+<li>やはり二次精度の数値スキームで数値振動を抑え込むことで，誤差を低減させることができた．</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">LUST unエネルギー損失</td>
+<td class="org-left">vanLeerエネルギー損失</td>
+</tr>
+
+<tr>
+<td class="org-left">9.73e-05 m</td>
+<td class="org-left">9.63e-05 m</td>
+</tr>
+
+<tr>
+<td class="org-left">相対誤差 1.4％</td>
+<td class="org-left">相対誤差0.31%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgb37c05f" class="outline-2">
+<h2 id="orgb37c05f"><span class="section-number-2">17.</span> 実践編：自宅水理実験の試行錯誤と課題（予備実験）</h2>
+<div class="outline-text-2" id="text-17">
+<ul class="org-ul">
+<li>モノづくりのアドバイスください</li>
+<li>接着の実験（水漏れがないか確認）</li>
+<li>使用した材料
+<ul class="org-ul">
+<li>木材の端材（長さ100mm程度，厚さ15mm程度）</li>
+<li>厚さ1mmの透明な塩ビ板</li>
+<li>接着剤はエポキシ系</li>
+<li>接着は，水路側面をクランプで力を加えた状態で1時間ほど放置</li>
+</ul></li>
+<li>手洗い場で水道から水をタンクに貯めて，噴流が出るのか確認</li>
+</ul>
+
+<div id="org55f9be6" class="figure">
+<p><img src="../../static/img/20260724125431.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;13:  </span>水漏れがないかの予備実験</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0a6157d" class="outline-2">
+<h2 id="org0a6157d"><span class="section-number-2">18.</span> 実践編：比較的大きなサイズで流量も増やして実験</h2>
+<div class="outline-text-2" id="text-18">
+<ul class="org-ul">
+<li>水路高さ600mm，全体水路長さ900mm</li>
+<li>風呂場のポンプ（10L/minと言われているが，まだ未測定）</li>
+<li>厚さ1mmの透明な塩ビ板</li>
+</ul>
+
+<div id="org90da846" class="figure">
+<p><img src="../../static/img/20260724130156.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;14:  </span>実験水路の全体像</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org07e43c1" class="outline-2">
+<h2 id="org07e43c1"><span class="section-number-2">19.</span> 実践編：接合部で水漏れ発生（実験中止）</h2>
+<div class="outline-text-2" id="text-19">
+<ul class="org-ul">
+<li>流量や水深を測定すれば，定量的な実験となる．</li>
+<li>水漏れがあちこちで発生し，測定が難しいため実験を断念</li>
+<li>再度作り直す予定</li>
+</ul>
+
+<div id="orgfd29be7" class="figure">
+<p><img src="../../static/img/20260724130501.png" alt="sample" title="sample" align="center" />
+</p>
+<p><span class="figure-number">&#22259;15:  </span>タオルという抵抗体をいれてタンク内の水の流速を下げる方針</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd68a0d7" class="outline-2">
+<h2 id="orgd68a0d7"><span class="section-number-2">20.</span> 結論</h2>
+<div class="outline-text-2" id="text-20">
+<ul class="org-ul">
+<li>前回の宿題の底面摩擦と乱流モデルは理論だけ勉強，実装はまた今後考える</li>
+<li>跳水をshallowWaterFoamで解き，適切な数値スキームを用いることで相対誤差を抑えることができる．</li>
+<li>メッシュサイズを変えた場合の計算も行い，更に誤差低減できるかも確認する</li>
+<li>実験は水漏れを防ぐ実験水路を再度作成する（ステンレス，ゴムパッキン，アクリル板，ネジ固定とか）．</li>
+</ul>
+
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll('.outline-2');
+  slides.forEach((s, i) => s.style.display = i === 0 ? 'block' : 'none');
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' && current < slides.length - 1) {
+      slides[current++].style.display = 'none';
+      slides[current].style.display = 'block';
+    } else if (e.key === 'ArrowLeft' && current > 0) {
+      slides[current--].style.display = 'none';
+      slides[current].style.display = 'block';
+    }
+  });
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>
